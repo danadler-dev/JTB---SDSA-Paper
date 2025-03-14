@@ -230,62 +230,96 @@ The following simulation shows a different SDSA system, with a population of 3 e
 \end{figure}
 
 Where is Maxwell's demon \cite{leff2002maxwell} hiding in Figure \ref{fig:figure_2}, driving it towards a low-entropy state? As we saw, the answer lies in the roulette wheel. Compounds that persist longer have more chances to interact. As their frequency in the population increases, their chances to interact grow even more. In Evolutionary Dynamics, this is called fitness-proportionate selection \cite{back1996evolutionary} or roulette wheel selection \cite{goldberg1989genetic} \cite{holland1975adaptation}.
-\section{Dual Probability Distributions Governing SDSA Systems}
 
-SDSA systems can be described by two probability distributions: the \textbf{population distribution}, which represents the relative abundance of patterns in the system, and the \textbf{stability distribution}, which quantifies the stable lifetime of successful compounds. The population distribution reflects the probabilities of patterns in any given generation \( t \). The probability \( P_t(p) \) of a pattern \( p \) at time \( t \) is its relative abundance in the population: $P_t(p) = \frac{N_t(p)}{\sum_{q \in P} N_t(q)}$. As patterns with high stability and frequent interactions become more prominent in the population, the population distribution evolves to reflect the history of past interactions and selection pressures.
 
-The stability distribution \( S(p) \) represents the persistence or longevity of the individual pattern \( p \) in the system, defined as the expected lifetime or persistence of \( p \) over generations.
+\section{Analysis of SDSA Systems Using Probability Distributions}
 
-In simulations of real-world scenarios, the values of \(S(p)\) are determined by the underlying physical, chemical, or even economic or social principles. In a chemical context, for example, stability factors might be derived from binding energies, reaction rate constants, catalysts, or free energies of formation. In an economic model, they could represent relative cost efficiencies or market resilience. In each case, \(S(p)\) encodes the notion of persistence in the relevant domain: the likelihood that a given compound, pattern, or agent survives long enough to interact and persist into the next generation. Unlike the population distribution, which evolves dynamically based on interactions, the stability distribution remains constant or changes only gradually. 
+This section analyzes the behavior of SDSA systems through probability theory, providing a mathematical framework for understanding how stability-driven selection shapes population dynamics over time.
 
-\subsection{Compound Persistence and Creation}
+\subsection{Population and Stability Distributions}
 
-The probability of a pattern at generation \(t+1\) arises from two distinct processes:
-\emph{persistence} of existing patterns and \emph{creation} of new copies. First, if a pattern \(p\) already exists at time \(t\), its ability to survive depends on its \emph{stability}:
+We can analyze SDSA systems through two key distributions: the \textbf{population distribution}, which represents the relative abundance of patterns in the system, and the \textbf{stability distribution}, which quantifies pattern lifetimes. The population distribution at generation \( t \) can be defined as \( P_t(p) = \frac{N_t(p)}{\sum_{q \in P} N_t(q)} \), where \( N_t(p) \) is the count of pattern \( p \) at generation \( t \). This distribution evolves over time as patterns with different stabilities interact and persist.
+
+The stability function \( S: P \rightarrow \mathbb{Z}^{+} \) maps each pattern to its lifetime in generations. Unlike the population distribution, which evolves dynamically based on interactions, the stability function is typically defined externally and remains constant throughout the simulation.
+
+In applications to real-world scenarios, the values of \(S(p)\) would be determined by underlying physical, chemical, or other domain-specific principles. For example, in a chemical context, stability values might correspond to binding energies or activation barriers; in an economic model, they could represent market resilience or competitive advantage. The stability function encodes the persistence property that drives selection in SDSA systems.
+
+\subsection{Analytical Model of Pattern Dynamics}
+
+To understand SDSA system evolution analytically, we can model how pattern probabilities change across generations. The probability of observing pattern \(p\) at generation \(t+1\) results from two distinct processes: the persistence of existing copies and the creation of new copies through interactions.
+
+For persistence analysis, we need to account for how pattern instances with different creation times contribute to the population. Given that pattern \(p\) has a deterministic lifetime of \(S(p)\) generations, we can express the persistence component as:
+
 \begin{equation}
 \label{eq:persist-term}
-\mathrm{Persist}_t(p) 
-\;=\; 
-P_t(p)\,\cdot\,S_t(p).
+\mathrm{Persist}_t(p) = P_t(p) \cdot \left(1 - \frac{1}{\overline{R}_t(p)}\right)
 \end{equation}
-Here, \(P_t(p)\) is the pattern's probability at generation~\(t\), and \(S_t(p)\) denotes its stability (expected lifetime). A higher \(S_t(p)\) increases the likelihood that \(p\) lasts or even grows in abundance from generation to generation. Second, more copies of pattern \(p\) can be \emph{created} through concatenations of other patterns:
+
+Where \(\overline{R}_t(p)\) represents the average remaining lifetime of pattern \(p\) instances in the population at generation \(t\), with \(\overline{R}_t(p) \leq S(p)\). This term accounts for the age distribution of existing pattern instances without assuming uniform creation rates.
+
+When the system is far from equilibrium or experiencing rapidly changing dynamics, \(\overline{R}_t(p)\) may vary significantly between generations. In a perfectly stable system with a constant creation rate, \(\overline{R}_t(p)\) would approach \(\frac{S(p)+1}{2}\), the average of remaining lifetimes for uniformly distributed ages.
+
+For creation analysis, we can estimate the probability of forming new copies of pattern \(p\) through concatenations:
 \begin{equation}
 \label{eq:create-term}
-\mathrm{Create}_t(p)
-\;=\;
-\sum_{(q,r)\,\to\,p}\;P_t(q)\,P_t(r),
+\mathrm{Create}_t(p) = \sum_{(q,r) \to p} P_t(q) \cdot P_t(r)
 \end{equation}
-where the notation \(\,(q,r)\to p\) indicates that \(p\) forms from combining patterns \(q\) and \(r\). This term captures how new copies of \(p\) appear whenever its reactants \(q\) and \(r\) are sufficiently probable within the population. For example, if there are copies of $AB, A, BA$ in the population, then $ABA$ can be formed by: $AB + A \to ABA$ or $A + BA \to ABA$. To obtain the final probability distribution at generation \(t+1\), we \emph{normalize} these contributions across all patterns:
+
+Where the notation \((q,r) \to p\) indicates pattern pairs that, when concatenated, form pattern \(p\). For example, pattern ABA can form from AB+A or A+BA.
+
+Combining these processes and normalizing yields an analytical approximation of the expected population distribution at the next generation:
 \begin{equation}
 \label{eq:full-ba-update}
-P_{t+1}(p)
-\;=\;
-\frac{
-  \mathrm{Persist}_t(p)
-  \;+\;
-  \mathrm{Create}_t(p)
+P_{t+1}(p) = \frac{
+  \mathrm{Persist}_t(p) + \mathrm{Create}_t(p)
 }{
-  \displaystyle \sum_{p'} 
-  \Bigl[
-    \mathrm{Persist}_t(p')
-    \;+\;
-    \mathrm{Create}_t(p')
-  \Bigr]
-}.
+  \sum_{p' \in P} 
+  \left[
+    \mathrm{Persist}_t(p') + \mathrm{Create}_t(p')
+  \right]
+}
 \end{equation}
 
-\subsection{Entropy Dynamics in SDSA Systems}
+It is important to note that this analytical model approximates the behavior of the SDSA simulation rather than defining it. The actual simulation proceeds according to the algorithm defined earlier, while this model helps us understand and predict the statistical properties of the system.
 
-When we leave out the normalization constant in Equation~\ref{eq:full-ba-update} it becomes evident that two competing processes determine how the probability shifts across patterns over generations:
+\subsection{Entropy Dynamics Analysis}
+
+Analysis of Equation~\ref{eq:full-ba-update} reveals two competing processes determining probability shifts across generations:
 \begin{equation}
-P_{t+1}(p) \;\propto\; \mathrm{Persist}_t(p) \;+\; \mathrm{Create}_t(p).
+P_{t+1}(p) \propto \mathrm{Persist}_t(p) + \mathrm{Create}_t(p)
 \end{equation}
 
-The term $\mathrm{Persist}_t(p)$, defined by $P_t(p)\,S(p)$, grows sharply when $S(p)$ is large, concentrating probability in stable patterns and lowering entropy by making the distribution more skewed.
+To quantify how stability differences drive entropy reduction, we can analyze the conditions under which the system evolves toward lower-entropy states. The Shannon entropy of the population distribution at time $t$ is given by:
+\begin{equation}
+H(P_t) = -\sum_{p \in P} P_t(p) \log P_t(p)
+\end{equation}
 
-The term $\mathrm{Create}_t(p)$ can increase or decrease the entropy depending on the overall distribution of the population $P_t$. If $P_t$ is uniform, then new patterns will be generated randomly and the entropy will remain high. However, if $P_t$ is skewed, then roulette-wheel selection will cause it to create more copies of existing patterns, thus reducing entropy.
+For entropy to decrease over time ($H(P_{t+1}) < H(P_t)$), the population distribution must become more concentrated. This depends critically on the relative magnitudes of pattern stabilities and their distribution.
 
-One may draw an analogy to a predator–prey dynamic: stable compounds act as predators by capturing and retaining probability at the expense of less stable patterns, while ephemeral or newly created compounds behave like prey by diffusing the distribution. In an unconstrained system without stability, there is no carryover advantage, so probability remains evenly spread and maintains high entropy. In a Stability-Driven Stochastic Assembly (SDSA) system, however, sufficiently large-stability patterns typically outcompete the rest. If their cumulative effect exceeds the diversification introduced by creation events, the entropy of the system declines over time, ultimately settling into a low-entropy configuration dominated by a small number of robust patterns.
+We can derive a condition for entropy reduction by examining when the persistence advantage of stable patterns outweighs the entropy-increasing effect of random pattern creation. Consider a system with two types of patterns: high-stability patterns with $S(p) = S_{high}$ and low-stability patterns with $S(p) = S_{low}$.
+
+For high-stability patterns to increase their relative frequency in the population (thus reducing entropy), the following condition must hold:
+
+\begin{equation}
+\frac{P_t(p_{high}) \cdot (1 - \frac{1}{\overline{R}_t(p_{high})})}{P_t(p_{low}) \cdot (1 - \frac{1}{\overline{R}_t(p_{low})})} > 1
+\end{equation}
+
+Assuming that both pattern types have reached their steady-state age distributions where $\overline{R}_t(p) \approx \frac{S(p)+1}{2}$, and simplifying, we get:
+
+\begin{equation}
+\frac{S_{high} - 1}{S_{high} + 1} > \frac{S_{low} - 1}{S_{low} + 1}
+\end{equation}
+
+This inequality is always satisfied when $S_{high} > S_{low}$, but the magnitude of the difference determines how quickly the distribution will skew. We can define a critical ratio $\rho^*$ that indicates when stability-driven selection will dominate over random creation effects:
+
+\begin{equation}
+\rho^* = \frac{S_{high}}{S_{low}} > \frac{|P| \cdot (S_{low} + 1)}{S_{low} - 1}
+\end{equation}
+
+Where $|P|$ represents the number of distinct patterns in the population. This threshold captures the critical relationship between stability differences and population diversity. 
+
+For large $S_{low}$ values, this simplifies to $\rho^* \approx |P|$, meaning that for significant entropy reduction, the highest stability should exceed the lowest by approximately a factor equal to the pattern diversity. When this condition is met, the system will evolve toward states dominated by the high-stability patterns, exhibiting substantial entropy reduction.
+
 
 \section{Mixing Two SDSA Systems}
 
