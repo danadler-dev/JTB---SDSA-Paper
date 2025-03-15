@@ -84,7 +84,7 @@
 %%             country={}}
 %% \fntext[label3]{}
 
-\title{Stability-Driven Stochastic Assembly}
+\title{Stability-Driven Assembly Theory}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{}
@@ -110,7 +110,7 @@
 %% Abstract
 \begin{abstract}
 %% Text of abstract
-The emergence of complexity and information is a fundamental question spanning disciplines from physics to biology and computation. Although traditional approaches often describe information as an emergent property, they leave unresolved how it dynamically arises from purely abiotic processes. This paper introduces Stability-Driven Stochastic Assembly (SDSA) systems, an abstract framework that models the evolution of patterns through probabilistic interactions and stability-driven selection. By abstracting away specific physical laws, SDSA systems offer a universal mechanism for generating order and information. Extending the principles of Assembly Theory (AT), SDSA systems emphasize forward dynamics, where selection pressures favor stable configurations that persist and interact more frequently. These dynamics provide a basis for understanding processes that could underlie the transition from abiotic to biotic evolution. Furthermore, the framework highlights the interplay between top-down and bottom-up causation, demonstrating how emergent patterns recursively influence their formation while being shaped by local interactions. This study offers a computationally realizable model for exploring the evolution of information, bridging the gap between randomness and complexity, while inviting further investigation into its applicability to natural and engineered systems.
+The emergence of complexity and information is a fundamental question spanning disciplines from physics to biology and computation. Although traditional approaches often describe information as an emergent property, they leave unresolved how it dynamically arises from purely abiotic processes. This paper introduces Stability-Driven Assembly (SDA) systems, an abstract framework that models the evolution of patterns through probabilistic interactions and stability-driven selection. By abstracting away specific physical laws, SDA systems offer a universal mechanism for generating order and information. Extending the principles of Assembly Theory (AT), SDA systems emphasize forward dynamics, where selection pressures favor stable configurations that persist and interact more frequently. These dynamics provide a basis for understanding processes that could underlie the transition from abiotic to biotic evolution. Furthermore, the framework highlights the interplay between top-down and bottom-up causation, demonstrating how emergent patterns recursively influence their formation while being shaped by local interactions. This study offers a computationally realizable model for exploring the evolution of information, bridging the gap between randomness and complexity, while inviting further investigation into its applicability to natural and engineered systems.
 \end{abstract}
 
 %%Graphical abstract
@@ -120,7 +120,7 @@ The emergence of complexity and information is a fundamental question spanning d
 
 %%Research highlights
 \begin{highlights}
-\item Develops Stability-Driven Stochastic Assembly (SDSA) as a rigorous mathematical framework for stability-based selection.
+\item Develops Stability-Driven Assembly Theory (SDAT) as a rigorous mathematical framework for stability-based selection.
 \item Formalizes how differential pattern persistence drives system evolution without requiring replication.
 \item Demonstrates through precise simulations how complexity emerges from stability-driven pattern selection.
 \item Quantifies the causal relationship between pattern stability and evolutionary outcomes in mixed populations.
@@ -153,32 +153,32 @@ The study of such selection mechanisms spans multiple scientific disciplines. Al
 
 Particularly relevant to stability-driven selection are autocatalytic sets, developed by Kauffman \cite{kauffman1986autocatalytic} and further explored by Hordijk and Filisetti \cite{hordijk2011required}, which examine how networks of molecules can collectively catalyze each other's production. Similarly, Fontana's Artificial Chemistry (AlChemy) \cite{fontana1991algorithmic} uses lambda calculus to model chemical reactions and explores how self-maintaining networks of interacting molecules emerge. The preferential attachment model introduced by Barabási and Albert \cite{barabasi1999emergence} demonstrates how entities with more connections preferentially attract new connections, creating a "rich-get-richer" effect conceptually similar to stability-driven selection, though based on connectivity rather than longevity.
 
-This paper introduces Stability-Driven Stochastic Assembly (SDSA) systems as a theoretical framework to explore how selection based purely on differential stability can drive the emergence of complexity and information. By abstracting away specific physical laws, SDSA systems model how persistent patterns accumulate, interact, and evolve through probabilistic processes guided by stability constraints. This approach offers a conceptual bridge between non-living physical systems governed by stability dynamics and the information-rich, evolutionary processes characteristic of biological systems.
+This paper introduces Stability-Driven Assembly (SDA) systems as a theoretical framework to explore how selection based purely on differential stability can drive the emergence of complexity and information. By abstracting away specific physical laws, SDA systems model how persistent patterns accumulate, interact, and evolve through probabilistic processes guided by stability constraints. This approach offers a conceptual bridge between non-living physical systems governed by stability dynamics and the information-rich, evolutionary processes characteristic of biological systems.
 
-Stability-Driven Stochastic Assembly (SDSA) systems distinguish themselves by their narrow focus on stability as the central determinant of pattern persistence. Stability is simulated by associating different lifetimes with concatenated patterns, capturing the essential dynamics of selection without invoking detailed physical or chemical laws. This approach allows SDSA systems to isolate and model selection as the driving mechanism of pattern evolution. By emphasizing stability-driven selection in evolving state spaces, SDSA systems provide a dynamic and generative framework for studying how patterns are created, maintained, and ultimately evolve into complex configurations, complementing existing approaches while filling a crucial gap in our understanding of how complexity emerges from simple principles.
+Stability-Driven Assembly (SDA) systems distinguish themselves by their narrow focus on stability as the central determinant of pattern persistence. Stability is simulated by associating different lifetimes with concatenated patterns, capturing the essential dynamics of selection without invoking detailed physical or chemical laws. This approach allows SDA systems to isolate and model selection as the driving mechanism of pattern evolution. By emphasizing stability-driven selection in evolving state spaces, SDA systems provide a dynamic and generative framework for studying how patterns are created, maintained, and ultimately evolve into complex configurations, complementing existing approaches while filling a crucial gap in our understanding of how complexity emerges from simple principles.
 
-While SDSA systems share some characteristics with natural processes where differential persistence creates selection pressure, such as crystal formation, sand dune patterns, and river network evolution, they abstract away specific physical mechanisms to focus on the universal principle of stability-driven selection. This abstraction allows us to formulate testable predictions about pattern formation in prebiotic and chemical systems, including the emergence of pseudo-homochirality and plateau-like complexity transitions that could be detected in laboratory experiments.
+While SDA systems share some characteristics with natural processes where differential persistence creates selection pressure, such as crystal formation, sand dune patterns, and river network evolution, they abstract away specific physical mechanisms to focus on the universal principle of stability-driven selection. This abstraction allows us to formulate testable predictions about pattern formation in prebiotic and chemical systems, including the emergence of pseudo-homochirality and plateau-like complexity transitions that could be detected in laboratory experiments.
 
-\section{SDSA System Fundamentals}
+\section{SDA System Fundamentals}
 
 \subsection{System Description}
 
-We define a Stability-Driven Stochastic Assembly (SDSA) system as a population of base elements \( A, B, C, \dots \) capable of forming compounds through local interactions. Compounds are represented as strings formed by concatenating base elements and existing compounds, allowing repetitive and recursive patterns of unbounded length. The elements may exist in our physical universe or in an abstract universe. 
+We define a Stability-Driven Assembly (SDA) system as a population of base elements \( A, B, C, \dots \) capable of forming compounds through local interactions. Compounds are represented as strings formed by concatenating base elements and existing compounds, allowing repetitive and recursive patterns of unbounded length. The elements may exist in our physical universe or in an abstract universe. 
 
-The stability of compounds determines how many generations they will persist in the population. For example, if compound AAB has a stability of 10, it will persist for 10 generations before disappearing. Unlike bidirectional models like MAK where dissipation of patterns is modeled explicitly, SDSA systems simply eliminate expired patterns. Since interactions are unconstrained, compounds with a stability of 0 may be created and destroyed in the same generation, effectively simulating impossible interactions. 
+The stability of compounds determines how many generations they will persist in the population. For example, if compound AAB has a stability of 10, it will persist for 10 generations before disappearing. Unlike bidirectional models like MAK where dissipation of patterns is modeled explicitly, SDA systems simply eliminate expired patterns. Since interactions are unconstrained, compounds with a stability of 0 may be created and destroyed in the same generation, effectively simulating impossible interactions. 
 
-Base elements regenerate at a constant rate in each generation, ensuring a continuous influx of resources that prevents stagnation and enables sustained exploration of the state space. This mirrors the continuous-flow stirred tank reactor (CFSTR) methodology used in chemical reaction modeling, where reactants are replenished at a constant rate to maintain steady-state conditions \cite{fogler1999chemical}. For \( n \) base elements replenished at a rate of \( m \) copies per generation, \( n \cdot m \) new tokens are injected per generation, supplementing existing compounds which may interact multiple times per generation. The term "token" is used in analogy to Petri nets \cite{petri1962communication}, where tokens represent discrete entities that move through a network based on transition rules. In SDSA systems, tokens track the presence of patterns evolving under stability-driven selection.
+Base elements regenerate at a constant rate in each generation, ensuring a continuous influx of resources that prevents stagnation and enables sustained exploration of the state space. This mirrors the continuous-flow stirred tank reactor (CFSTR) methodology used in chemical reaction modeling, where reactants are replenished at a constant rate to maintain steady-state conditions \cite{fogler1999chemical}. For \( n \) base elements replenished at a rate of \( m \) copies per generation, \( n \cdot m \) new tokens are injected per generation, supplementing existing compounds which may interact multiple times per generation. The term "token" is used in analogy to Petri nets \cite{petri1962communication}, where tokens represent discrete entities that move through a network based on transition rules. In SDA systems, tokens track the presence of patterns evolving under stability-driven selection.
 
 \begin{figure}[htp]
     \centering
     \includegraphics[height=5cm]{figure_1}
-    \caption{SDSA analogue of a chemical Continuous Flow Stirred Tank Reactor (CFSTR)}
+    \caption{SDA analogue of a chemical Continuous Flow Stirred Tank Reactor (CFSTR)}
     \label{fig:figure_1}
 \end{figure}
 
 \subsection{Formal Definition}
 
-A Stability-Driven Stochastic Assembly (SDSA) system is formally defined as a tuple $(E, P, S, R, I)$ where:
+A Stability-Driven Assembly (SDA) system is formally defined as a tuple $(E, P, S, R, I)$ where:
 \begin{itemize}
    \item $E = \{e_1, e_2, \ldots, e_n\}$ is a finite set of base elements
    \item $P$ is the set of all possible patterns formed by concatenating elements from $E$ and existing patterns, with each pattern $p \in P$ being a string over the alphabet $E$
@@ -191,7 +191,7 @@ The state of the system at generation $t$ is defined by the set of patterns pres
 
 
 \begin{algorithm}[H]
-\caption{SDSA System Simulation}
+\caption{SDA System Simulation}
 \begin{algorithmic}[1]
 \REQUIRE Set of base elements $E$, stability function $S$, replenishment rates $R$, interaction count $I$, generations $T$
 \ENSURE Evolution of pattern population over $T$ generations
@@ -218,35 +218,35 @@ The probability of selecting a pattern $p$ for interaction in generation $t$ is 
 
 \subsection{Illustrative Examples}
 
-Consider a simple SDSA system starting with a few instances of the base elements \( A \) and \( B \). The pattern \( AB \) has a lifetime of 10 generations, while \( ABAB \) has a lifetime of 50 generations, and all other compounds degrade instantly with a lifetime of 0. After the first generation, the system produces combinations such as \( AA \), \( BB \), and \( AB \). Since \( AA \) and \( BB \) are unstable, they are eliminated, leaving \( A \), \( B \), and \( AB \). In subsequent generations, new unstable patterns may appear transiently, but \( AB \) persists due to its longer lifetime. The abundance of \( AB \) naturally increases as it persists, raising the probability of forming \( ABAB \). This dynamic reflects a form of roulette wheel selection \cite{goldberg1989genetic} \cite{holland1975adaptation}, where stability-driven persistence affects interaction probability. The emergent pattern \( ABAB \) represents a higher-order configuration, demonstrating how selection, grounded in differential stability, shapes the system's evolutionary pathways. 
+Consider a simple SDA system starting with a few instances of the base elements \( A \) and \( B \). The pattern \( AB \) has a lifetime of 10 generations, while \( ABAB \) has a lifetime of 50 generations, and all other compounds degrade instantly with a lifetime of 0. After the first generation, the system produces combinations such as \( AA \), \( BB \), and \( AB \). Since \( AA \) and \( BB \) are unstable, they are eliminated, leaving \( A \), \( B \), and \( AB \). In subsequent generations, new unstable patterns may appear transiently, but \( AB \) persists due to its longer lifetime. The abundance of \( AB \) naturally increases as it persists, raising the probability of forming \( ABAB \). This dynamic reflects a form of roulette wheel selection \cite{goldberg1989genetic} \cite{holland1975adaptation}, where stability-driven persistence affects interaction probability. The emergent pattern \( ABAB \) represents a higher-order configuration, demonstrating how selection, grounded in differential stability, shapes the system's evolutionary pathways. 
 
-The following simulation shows a different SDSA system, with a population of 3 elements: {A, B, C}. Assume that the B compounds are more stable than those without B. Thus, patterns like BB, AB, BC, and ABC have a higher stability than AC, A, or C. Therefore, B compounds will persist for multiple generations, while all others will dissipate. The more stable B-compounds will interact more frequently as a result of their relative frequency, even though there is no replication or inheritance at the individual compound level. A snapshot of the simulation is shown in Figure \ref{fig:figure_2}.
+The following simulation shows a different SDA system, with a population of 3 elements: {A, B, C}. Assume that the B compounds are more stable than those without B. Thus, patterns like BB, AB, BC, and ABC have a higher stability than AC, A, or C. Therefore, B compounds will persist for multiple generations, while all others will dissipate. The more stable B-compounds will interact more frequently as a result of their relative frequency, even though there is no replication or inheritance at the individual compound level. A snapshot of the simulation is shown in Figure \ref{fig:figure_2}.
 
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1\textwidth]{figure_2}
-    \caption{SDSA System population evolution simulation}
+    \caption{SDA System population evolution simulation}
     \label{fig:figure_2}
 \end{figure}
 
 Where is Maxwell's demon \cite{leff2002maxwell} hiding in Figure \ref{fig:figure_2}, driving it towards a low-entropy state? As we saw, the answer lies in the roulette wheel. Compounds that persist longer have more chances to interact. As their frequency in the population increases, their chances to interact grow even more. In Evolutionary Dynamics, this is called fitness-proportionate selection \cite{back1996evolutionary} or roulette wheel selection \cite{goldberg1989genetic} \cite{holland1975adaptation}.
 
 
-\section{Analysis of SDSA Systems Using Probability Distributions}
+\section{Analysis of SDA Systems Using Probability Distributions}
 
-This section analyzes the behavior of SDSA systems through probability theory, providing a mathematical framework for understanding how stability-driven selection shapes population dynamics over time.
+This section analyzes the behavior of SDA systems through probability theory, providing a mathematical framework for understanding how stability-driven selection shapes population dynamics over time.
 
 \subsection{Population and Stability Distributions}
 
-We can analyze SDSA systems through two key distributions: the \textbf{population distribution}, which represents the relative abundance of patterns in the system, and the \textbf{stability distribution}, which quantifies pattern lifetimes. The population distribution at generation \( t \) can be defined as \( P_t(p) = \frac{N_t(p)}{\sum_{q \in P} N_t(q)} \), where \( N_t(p) \) is the count of pattern \( p \) at generation \( t \). This distribution evolves over time as patterns with different stabilities interact and persist.
+We can analyze SDA systems through two key distributions: the \textbf{population distribution}, which represents the relative abundance of patterns in the system, and the \textbf{stability distribution}, which quantifies pattern lifetimes. The population distribution at generation \( t \) can be defined as \( P_t(p) = \frac{N_t(p)}{\sum_{q \in P} N_t(q)} \), where \( N_t(p) \) is the count of pattern \( p \) at generation \( t \). This distribution evolves over time as patterns with different stabilities interact and persist.
 
 The stability function \( S: P \rightarrow \mathbb{Z}^{+} \) maps each pattern to its lifetime in generations. Unlike the population distribution, which evolves dynamically based on interactions, the stability function is typically defined externally and remains constant throughout the simulation.
 
-In applications to real-world scenarios, the values of \(S(p)\) would be determined by underlying physical, chemical, or other domain-specific principles. For example, in a chemical context, stability values might correspond to binding energies or activation barriers; in an economic model, they could represent market resilience or competitive advantage. The stability function encodes the persistence property that drives selection in SDSA systems.
+In applications to real-world scenarios, the values of \(S(p)\) would be determined by underlying physical, chemical, or other domain-specific principles. For example, in a chemical context, stability values might correspond to binding energies or activation barriers; in an economic model, they could represent market resilience or competitive advantage. The stability function encodes the persistence property that drives selection in SDA systems.
 
 \subsection{Analytical Model of Pattern Dynamics}
 
-To understand SDSA system evolution analytically, we can model how pattern probabilities change across generations. The probability of observing pattern \(p\) at generation \(t+1\) results from two distinct processes: the persistence of existing copies and the creation of new copies through interactions.
+To understand SDA system evolution analytically, we can model how pattern probabilities change across generations. The probability of observing pattern \(p\) at generation \(t+1\) results from two distinct processes: the persistence of existing copies and the creation of new copies through interactions.
 
 For persistence analysis, we need to account for how pattern instances with different creation times contribute to the population. Given that pattern \(p\) has a deterministic lifetime of \(S(p)\) generations, we can express the persistence component as:
 
@@ -280,117 +280,236 @@ P_{t+1}(p) = \frac{
 }
 \end{equation}
 
-It is important to note that this analytical model approximates the behavior of the SDSA simulation rather than defining it. The actual simulation proceeds according to the algorithm defined earlier, while this model helps us understand and predict the statistical properties of the system.
+It is important to note that this analytical model approximates the behavior of the SDA simulation rather than defining it. The actual simulation proceeds according to the algorithm defined earlier, while this model helps us understand and predict the statistical properties of the system.
 
 \subsection{Entropy Dynamics Analysis}
-
 Analysis of Equation~\ref{eq:full-ba-update} reveals two competing processes determining probability shifts across generations:
 \begin{equation}
 P_{t+1}(p) \propto \mathrm{Persist}_t(p) + \mathrm{Create}_t(p)
 \end{equation}
 
-To quantify how stability differences drive entropy reduction, we can analyze the conditions under which the system evolves toward lower-entropy states. The Shannon entropy of the population distribution at time $t$ is given by:
+An alternative approach to understanding entropy dynamics in SDA systems involves analyzing the rate of change in Shannon entropy over time. We can express the expected entropy change between generations as:
 \begin{equation}
-H(P_t) = -\sum_{p \in P} P_t(p) \log P_t(p)
+\Delta H = H(P_{t+1}) - H(P_t)
 \end{equation}
 
-For entropy to decrease over time ($H(P_{t+1}) < H(P_t)$), the population distribution must become more concentrated. This depends critically on the relative magnitudes of pattern stabilities and their distribution.
-
-We can derive a condition for entropy reduction by examining when the persistence advantage of stable patterns outweighs the entropy-increasing effect of random pattern creation. Consider a system with two types of patterns: high-stability patterns with $S(p) = S_{high}$ and low-stability patterns with $S(p) = S_{low}$.
-
-For high-stability patterns to increase their relative frequency in the population (thus reducing entropy), the following condition must hold:
-
+For systems with varying pattern stabilities, the entropy dynamics are governed by the relative influence of persistence versus creation mechanisms. We can formalize this through an influence parameter $\alpha$, which represents the proportion of pattern abundance determined by stability-driven persistence:
 \begin{equation}
-\frac{P_t(p_{high}) \cdot (1 - \frac{1}{\overline{R}_t(p_{high})})}{P_t(p_{low}) \cdot (1 - \frac{1}{\overline{R}_t(p_{low})})} > 1
+\alpha = \frac{\sum_p \mathrm{Persist}_t(p)}{\sum_p \mathrm{Persist}_t(p) + \sum_p \mathrm{Create}_t(p)}
 \end{equation}
 
-Assuming that both pattern types have reached their steady-state age distributions where $\overline{R}_t(p) \approx \frac{S(p)+1}{2}$, and simplifying, we get:
+When $\alpha$ approaches 1, stability-driven selection dominates the system dynamics; when $\alpha$ approaches 0, random creation processes predominate.
 
+The entropy change can then be approximated as:
 \begin{equation}
-\frac{S_{high} - 1}{S_{high} + 1} > \frac{S_{low} - 1}{S_{low} + 1}
+\Delta H \approx (1 - \alpha) \cdot \Delta H_{create} + \alpha \cdot \Delta H_{persist}
 \end{equation}
 
-This inequality is always satisfied when $S_{high} > S_{low}$, but the magnitude of the difference determines how quickly the distribution will skew. We can define a critical ratio $\rho^*$ that indicates when stability-driven selection will dominate over random creation effects:
+Where $\Delta H_{create}$ represents the entropy change from creation processes (typically positive or zero) and $\Delta H_{persist}$ represents the entropy change from stability-driven persistence (typically negative).
 
-\begin{equation}
-\rho^* = \frac{S_{high}}{S_{low}} > \frac{|P| \cdot (S_{low} + 1)}{S_{low} - 1}
-\end{equation}
-
-Where $|P|$ represents the number of distinct patterns in the population. This threshold captures the critical relationship between stability differences and population diversity. 
-
-For large $S_{low}$ values, this simplifies to $\rho^* \approx |P|$, meaning that for significant entropy reduction, the highest stability should exceed the lowest by approximately a factor equal to the pattern diversity. When this condition is met, the system will evolve toward states dominated by the high-stability patterns, exhibiting substantial entropy reduction.
-
-
-\section{Mixing Two SDSA Systems}
-
-Mixing two independently evolved Stability-Driven Stochastic Assembly (SDSA) systems introduces a new layer of complexity, where patterns and interactions from each system influence and reshape one another. This interaction results in the exchange of information, changes in entropy dynamics, and the emergence of novel patterns that were inaccessible within isolated systems.
-
-Consider two independently evolved SDSA systems, each representing populations of compounds derived from distinct base elements: \( A, B, C\) for the first system and \( X, Y, Z\) for the second. Each system evolves separately, guided by its population distribution and node stability constraints. Upon mixing, the systems form a joint network in which patterns from both systems interact to create compounds between systems (e.g. \( ABXX, BBYZ \)). Stability constraints, which govern the persistence of patterns, extend to these intersystem interactions, creating a dynamic interplay that determines the joint system's evolution. The updated probabilities in the combined system reflect both the within-system interactions and the newly formed cross-system interactions, as depicted in Figure~\ref{fig:figure_3}.
-
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=13cm]{figure_3}
-    \caption{Mixing two independently evolved populations in a Bayesian Assembly system. Cross-system interactions enable the emergence of novel compounds with high stability, fostering a broader exploration of the state space.}
-    \label{fig:figure_3}
-\end{figure}
-
-An analogous process occurs in a continuous-flow stirred tank reactor (CFSTR) \cite{fogler1999chemical}, where two distinct chemical feeds are mixed to produce a steady-state mixture. Within this reactor, reactants from each feed can participate in cross-reactions, occasionally generating novel compounds (e.g. \( AZ \)) that exhibit greater stability than those found in either feed alone. 
-
-Mixing two SDSA systems introduces a larger combined stable state space, where the stable patterns that evolved independently within each system now have increased opportunities to cross-interact. New stable cross-products will only form if their stability is higher than existing stable patterns in each population, possibly decreasing the overall entropy.
-
-\section{Why Bayesian Assembly?}
-
-The term Stability-Driven Stochastic Assembly (SDSA) is motivated by the system's iterative updating of probability distributions, analogous to Bayesian inference. In SDSA systems, the probability of each pattern \( P_t(p) \) in generation \( t \) acts as a prior, which is then updated based on stability and interaction dynamics to produce a posterior \( P_{t+1}(p) \) in the next generation. 
-
-We previously saw that $P_{t+1}(p) \propto\ Persist_t(p) + Create_t(p)$, where stability \( S(p) \) plays a role in $Persist(p)$ similar to a Bayesian likelihood function, determining the persistence of existing patterns (which are the observed data). The term $Create(p)$ measures the rate of creation of new copies of patterns, so it does not depend directly on the pattern already existing in the population. Le \cite{le2020equation} has shown that evolutionary processes generally follow a Bayesian update dynamic, where the prior and posterior correspond to the distributions of successive generations. 
-
-The evolving probability distribution in Stability-Driven Stochastic Assembly (SDSA) systems is an elaboration of Kauffman's \emph{Theory of the Adjacent Possible} \cite{kauffman2000investigations, kauffman2024tap}, which describes that new states become accessible as existing structures form but does not propose a selection mechanism. SDSA systems may provide the missing mechanism for the exploration of the "adjacent possible".
-
-\section{Do SDSA Systems Truly Evolve?}
-
-A natural question arises: do SDSA systems genuinely evolve, or is "evolution" merely an analogy? Although SDSA systems lack explicit self-replication at the level of individual instances of a pattern $p_i$, they exhibit population-level dynamics that are mathematically indistinguishable from classical evolutionary processes. 
-
-The fundamental mechanism driving this behavior is that more copies of $p$ are sustainably created from the precursor patterns, leading to an increasing relative abundance $N_p$ in the population. Moreover, the stability function $S(p)$ ensures that higher stability patterns persist longer before being degraded or replaced, further amplifying their representation. 
-
-These dynamics align with the principles of fitness-weighted selection in evolutionary systems, where persistence and reproductive opportunity drive the emergence of dominant patterns. Since the probability of $p$'s continued presence is explicitly governed by its relative abundance and stability, resulting in a roulette wheel selection process, we may assert that SDSA systems exhibit genuine evolutionary behavior, not as a mere analogy, but as a mathematical inevitability.
-
-
-\section{Simulation of Unconstrained and Bayesian Assembly Systems}
-
-Unconstrained systems allow all possible compounds to form with equal likelihood in each generation, leading to unbounded combinatorial expansion of the state space. If $N_t$ is the total number of compounds present in generation $t$, the probability of observing a specific compound $p$ can be approximated by $P_t(p) = \frac{1}{N_t}$. $N_t$ grows with $t$, so $P_t(p) \to \epsilon$ for any single compound. This uniform dispersion implies that no pattern dominates. The entropy of the system increases as more compounds enter the state space.
-
-To compare the dynamics of unconstrained and SDSA systems, we developed a simulation framework that models the evolution of compound formation over successive generations. This framework captures the key contrasts between the two regimes: the uniform expansion of state space of the unconstrained system and the stability-driven selection pressures of the SDSA system. The simulation begins with an initial population of base elements and proceeds through a fixed number of generations. The following pseudocode captures the main steps and shows that the only difference between the unconstrained and SDSA systems is the setting of expiration times for compounds based on their stability.
-
-\begin{center}
-\begin{minipage}{0.9\textwidth}
-\ttfamily
-\begin{verbatim}
-Initialize population with base elements
-For each generation:
-    Replenish base elements in population
-    For each interaction:
-        Randomly select a pair of elements from population
-        Form compound by concatenation and add to population
-        If SDSA system:
-            Set compound expiration based on S(p)
-    Remove expired elements from population
-    Compact patterns into simplified representations
-    Store population data for analysis
-\end{verbatim}
-\end{minipage}
-\end{center}
-The simulation results in Figure \ref{fig:figure_4} confirm that the unconstrained system disperses its probabilities over an expanding set of compounds, mirroring a uniform exploration of the combinatorial state space with high entropy. In contrast, the SDSA system channels probability into a subset of stable compounds. High-stability patterns become attractors, reducing entropy as the system evolves. Figure~\ref{fig:figure_4} illustrates these differences: while the unconstrained distribution remains broad and diffuse, the SDSA distribution skews heavily toward stable patterns and a peaked distribution which reduces entropy.
+\subsubsection{Simulation Results}
+To empirically validate the entropy dynamics in SDA systems, we conducted a series of simulations comparing SDA systems to unconstrained systems. Figure~\ref{fig:entropy_comparison} shows the entropy evolution in both systems over time.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth,height=6cm]{figure_4.png}
-    \caption{Simulation of  unconstrained system (uniform distribution) and SDSA systems (peaked distribution).}
-    \label{fig:figure_4}
- \end{figure}
+    \includegraphics[width=0.8\textwidth]{entropy_comparison}
+    \caption{Entropy comparison between SDA system and unconstrained system. The SDA system consistently maintains lower entropy due to stability-driven selection.}
+    \label{fig:entropy_comparison}
+\end{figure}
 
-\section{Dynamic Graph Representation and Token Flow Analysis}
+As predicted by our theoretical model, the SDA system demonstrates significantly lower entropy compared to the unconstrained system. The pattern diversity is also reduced, with high-stability patterns dominating the population. Figure~\ref{fig:pattern_distribution} illustrates this difference in pattern distributions.
 
-To further investigate the dynamics of SDSA systems, we represent the state of the system in a specific generation as a directed graph, where the nodes correspond to base elements and compounds such as $A$, $AB$, $ABA$, $ABC$, and the directed edges represent the interactions that occurred between them in their assembly process. The base elements $A$, $B$, $C$ are replenished in each generation, initiating a cascade of interactions that propagate tokens (shown in Figure~\ref{fig:figure_5} as the count $N$ of instances or copies of each pattern). 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{pattern_distribution}
+    \caption{Pattern distribution comparison. The SDA system (right) shows dominance of a few stable patterns, while the unconstrained system (left) exhibits a more uniform distribution, with base element replenishment rate of 5 dominating.}
+    \label{fig:pattern_distribution}
+\end{figure}
+
+Interestingly, our simulations revealed that SDA systems with multiple high-stability patterns often exhibit oscillatory behavior in entropy over time. Figure~\ref{fig:entropy_oscillations} demonstrates this phenomenon.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{entropy_oscillations}
+    \caption{Oscillatory entropy dynamics in an SDA system with multiple high-stability patterns. The periods between entropy minima (marked with triangles) correspond to cycles of pattern dominance shifts.}
+    \label{fig:entropy_oscillations}
+\end{figure}
+
+\subsubsection{Dynamical Systems Interpretation}
+The oscillatory behavior observed in SDA systems bears striking resemblance to coupled oscillator networks analyzed by Strogatz \cite{strogatz2001exploring}. Drawing from complex network theory, we can interpret SDA systems as networks where patterns are nodes with intrinsic frequencies determined by their stability values.
+
+In such systems, Strogatz demonstrates that oscillations emerge with periods that scale according to the relationship:
+
+\begin{equation}
+T \propto \sqrt{\frac{K}{|\omega_1 - \omega_2|}}
+\end{equation}
+
+Where $K$ is the coupling strength and $\omega_1$ and $\omega_2$ are the natural frequencies of interacting components. Adapting this framework to SDA systems, we propose that oscillation periods can be approximated by:
+
+\begin{equation}
+T \approx \beta \sqrt{\frac{I \cdot S_1 \cdot S_2}{|S_1 - S_2|}}
+\end{equation}
+
+Where $I$ is the interaction rate per generation, $S_1$ and $S_2$ are the stabilities of the dominant patterns, and $\beta$ is a system-specific constant. This formulation provides a theoretical basis for understanding the oscillatory dynamics observed in our simulations and connects SDA systems to the broader field of complex network theory.
+
+The presence of these oscillations further demonstrates that SDA systems exhibit rich, complex dynamics driven by the interplay between pattern formation and stability-driven selection. These dynamics allow the system to explore different regions of the pattern space while maintaining lower entropy than unconstrained systems.
+
+\section{Intervention Analysis of Stability-Driven Assembly Systems}
+
+To test the causal relationship between stability constraints and system evolution, we conducted controlled intervention experiments on SDA systems. These experiments systematically altered stability parameters mid-simulation, allowing us to isolate the direct impact of stability on pattern distribution, entropy, and complexity. By comparing transitions from unconstrained to stability-driven configurations and vice versa, we established a rigorous basis for understanding how stability shapes evolutionary dynamics in these systems.
+
+\subsection{Experimental Design}
+
+We implemented two key intervention experiments:
+
+\begin{enumerate}
+    \item \textbf{Unconstrained to SDA}: An initially unconstrained system (uniform stability values) was allowed to evolve for 400 generations, after which stability constraints were introduced according to a predefined stability function $S(p)$ that assigned higher values to specific patterns.
+    
+    \item \textbf{SDA to Unconstrained}: An initially stability-constrained system evolved for 400 generations before having all stability constraints removed, setting all patterns to uniform stability values.
+\end{enumerate}
+
+In both cases, we maintained identical parameters for base element replenishment (rate = 5) and interaction frequency (100 interactions per generation). The stability function for the SDA condition assigned significantly higher values to certain patterns:
+
+\begin{equation}
+S(p) = 
+\begin{cases}
+100, & \text{if } p = \text{ABCABA} \\
+50, & \text{if } p \in = \text{ABA, ABC} \\
+30, & \text{if } p \in \{\text{AB, BC}\} \\
+1, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+This differential stability created strong selection pressure favoring patterns with higher persistence values. Population metrics were tracked throughout the experiments, with special attention to system entropy, pattern diversity, and the relative abundance of specific pattern types before and after intervention.
+
+\subsection{Unconstrained to SDA Transition}
+\label{subsec:unconstrained-to-sda}
+
+When transitioning from an unconstrained to a stability-driven regime, we observed pronounced and immediate changes in system behavior. Figure~\ref{fig:u2s-entropy} illustrates the entropy evolution across this transition point.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{unconstrained_to_sda_entropy.png}
+    \caption{Entropy evolution when transitioning from an unconstrained to an SDA system. The vertical dashed line marks the intervention point where stability constraints were introduced.}
+    \label{fig:u2s-entropy}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{unconstrained_to_sda_population_comparison.png}
+    \caption{Pattern composition before (left) and after (right) transitioning from an unconstrained to an SDA system. Bar colors represent stability values, with darker colors indicating higher stability. Percentages indicate relative population frequency.}
+    \label{fig:u2s-patterns}
+\end{figure}
+
+
+Prior to intervention, the system exhibited high entropy characteristic of an unconstrained regime, where all patterns persist for identical durations regardless of composition. After imposing the stability function at generation 400, entropy decreased rapidly and significantly before settling into some oscillations as described earlier. The pattern composition before and after intervention (Figure~\ref{fig:u2s-patterns}) reveals the mechanism behind this entropy change.
+
+In the unconstrained phase, pattern distribution remained relatively uniform with numerous patterns maintaining similar population percentages. After introducing stability constraints, the system evolved toward dominance by patterns with higher assigned stability values. This supports the prediction in SDA theory that stability acts as a selective force.
+
+\subsection{SDA to Unconstrained Transition}
+\label{subsec:sda-to-unconstrained}
+
+To establish bidirectional causality, we also examined the transition from a stability-driven to an unconstrained regime. Figure~\ref{fig:s2u-entropy} shows the entropy evolution during this reverse intervention.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{sda_to_unconstrained_entropy.png}
+    \caption{Entropy evolution when transitioning from an SDA to an unconstrained system. The vertical dashed line marks the intervention point where stability constraints were removed.}
+    \label{fig:s2u-entropy}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{sda_to_unconstrained_population_comparison.png}
+    \caption{Pattern composition before (left) and after (right) transitioning from an SDA to an unconstrained system. Bar colors represent stability values in the SDA phase (left) and pattern length in the unconstrained phase (right).}
+    \label{fig:s2u-patterns}
+\end{figure}
+
+
+Before intervention, the SDA system oscillated around low entropy values of ~4 bits, characterized by a distribution heavily skewed toward high-stability patterns. Upon removal of stability constraints at generation 400, entropy increased within 100 generations as stable patterns died out, and the system returned to a more uniform distribution with an entropy of over 6 bits. This confirms that entropy reduction in SDA systems is directly caused by differential stability rather than other factors. Figure~\ref{fig:s2u-patterns} displays the pattern composition before and after this reverse intervention.
+
+The pre-intervention state shows the characteristic peaked distribution of the SDA system, with high-stability patterns dominating the population. After removing stability constraints, this distribution flattened considerably, as patterns previously favored solely for their stability lost their selective advantage. The pattern diversity increased from 47 unique patterns in the SDA regime to 129 in the unconstrained system, further demonstrating how stability constraints channel system evolution.
+
+\subsection{Comparative Analysis and Causal Inference}
+\label{subsec:comparative-analysis}
+
+Figure~\ref{fig:combined-entropy} presents a comparative analysis of both intervention types, clearly establishing the causal relationship between stability constraints and entropy dynamics.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{combined_interventions.png}
+    \caption{Comparative entropy evolution for both intervention types: unconstrained to SDA (blue) and SDA to unconstrained (red). The vertical line indicates the intervention point at generation 200.}
+    \label{fig:combined-entropy}
+\end{figure}
+
+The symmetrical and opposite responses to intervention in both experiments provide strong evidence for causality. When stability constraints are imposed, entropy decreases; when they are removed, entropy increases. This symmetry suggests that stability acts as a control parameter that directly determines the entropy state of the system.
+
+\subsection{Implications for Stability-Driven Assembly Theory}
+\label{subsec:implications}
+
+These intervention experiments provide several key insights into Stability-Driven Assembly Theory:
+
+\begin{enumerate}
+    \item \textbf{Causal Mechanism}: Stability differences directly cause the emergence of selection pressure, with no need for explicit replication mechanisms. The differential persistence of patterns based on their stability values is sufficient to generate evolutionary dynamics.
+    
+    \item \textbf{Entropy Reduction}: SDA systems naturally evolve toward lower-entropy states, with the magnitude of reduction proportional to the disparity in stability values between patterns.
+    
+    \item \textbf{Attractor States}: The system converges toward well-defined attractor states characterized by the dominance of high-stability patterns, demonstrating how stability acts as a control parameter that shapes the evolutionary landscape.
+    
+    \item \textbf{Reversibility}: The effects of stability-driven selection are reversible, confirming that the observed pattern distributions are maintained by ongoing selection pressure rather than historical contingency.
+\end{enumerate}
+
+These findings establish that stability-driven selection can account for the emergence of ordered, non-random pattern distributions without requiring explicit replication or inheritance mechanisms at the pattern level. By preferentially preserving certain configurations based solely on their persistence properties, SDA systems provide a minimal framework for understanding how complexity and information can accumulate in systems far from equilibrium.
+
+
+\subsection{Evolutionary Dynamics in SDA Systems}
+\label{subsec:evolutionary-dynamics}
+
+A fundamental question arising from our intervention experiments is whether SDA systems genuinely evolve, or if "evolution" merely serves as an analogy. Evolution in biological systems typically involves replication, inheritance, and selection—processes that collectively produce adaptation over time. Although SDA systems lack explicit self-replication at the level of individual pattern instances, our intervention experiments reveal population-level dynamics that are mathematically indistinguishable from classical evolutionary processes.
+
+The causal mechanism identified in Section~\ref{subsec:comparative-analysis} demonstrates how statistical feedback emerges naturally from differential stability. When the system transitions from unconstrained to stability-driven dynamics, patterns with higher stability consistently rise to dominance without requiring explicit replication machinery. As shown in Figure~\ref{fig:u2s-patterns}, high-stability patterns like ABCABA (stability = 100) increased from negligible representation to over 40\% of the population after stability constraints were introduced. This dominance emerges through two reinforcing mechanisms observed in our simulations:
+\begin{enumerate}
+    \item \textbf{Persistence advantage}: Higher stability patterns persist longer before being removed from the population, accumulating more copies over time.
+    \item \textbf{Frequency-dependent selection}: As patterns become more frequent in the population, they have proportionally more opportunities to participate in interactions, further amplifying their representation.
+\end{enumerate}
+
+These dynamics align precisely with the principles of fitness-weighted selection in evolutionary systems, where persistence and reproductive opportunity drive the emergence of dominant patterns. The selection mechanism in SDA systems operates through what is effectively a roulette wheel selection process, where a pattern's probability of being selected for interaction is proportional to its frequency in the population, which in turn depends on its stability-determined lifetime.
+
+The entropy changes observed after interventions in both directions (Figures~\ref{fig:u2s-entropy} and~\ref{fig:s2u-entropy}) confirm that this selection pressure continuously shapes the population distribution. When stability constraints were removed, previously dominant patterns quickly lost their selective advantage, demonstrating that their prevalence was maintained by ongoing selection rather than historical contingency.
+
+Based on these empirical observations, we may assert that SDA systems exhibit genuine evolutionary behavior, not as a mere analogy, but as a mathematical inevitability arising from differential persistence. This conclusion is particularly significant because it suggests that selection—one of the core mechanisms of evolutionary change—can emerge spontaneously in systems with nothing more than (1) elements that can combine to form compounds, (2) differential stability among those compounds, and (3) probabilistic interaction rules.
+
+The implications extend beyond theoretical interest: if selection can emerge spontaneously from stability differences, then evolutionary dynamics may be more universal than previously recognized, potentially operating in prebiotic chemical systems, planetary formation processes, and other non-biological contexts where structures with different lifetimes interact to form new compounds. The intervention experiments presented here provide empirical support for this broader view of evolutionary processes, establishing stability-driven selection as a potential bridge between non-living physical systems and the information-rich evolutionary processes characteristic of biological systems.
+
+
+\section{Top-Down vs.\ Bottom-Up Dynamics in SDA Systems}
+\label{sec:topdown-bottomup}
+
+Figure~\ref{fig:figure_10} illustrates the interplay between top-down and bottom-up causation in Stability-Driven Assembly (SDA) systems, where the top-down influence emerges from the increasing relative abundance of stable patterns directing subsequent interactions, while bottom-up processes arise from the probabilistic assembly of base elements into intermediate and complex patterns, creating a dynamic feedback loop that drives the evolution of information and complexity.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth,height=0.7\linewidth]{figure_10.png}
+    \caption{Bottom-up and Top-down causation in SDA systems}
+    \label{fig:figure_10}
+\end{figure}
+
+Once certain patterns become dominant, they exert a top-down influence on subsequent generations. These higher-level persistent structures shape future interactions by catalyzing or constraining the formation of new patterns. Hence, SDA systems do not just accumulate complexity through local rules; they also incorporate feedback from emergent structures that guide (or ``select for'') new configurations. The presence of memory and evolutionary history in these feedback loops distinguishes SDA systems from frameworks in which higher-level states simply describe aggregates without influencing the underlying microstates.
+
+The contrast with traditional statistical mechanics is instructive \cite{landau1980statistical}. In statistical mechanics, macrostates (e.g., temperature, pressure) represent aggregate properties of microstates but do not directly influence the fundamental interaction rules among particles. In SDA systems, however, dominant patterns exert a causal influence on micro-level interactions, embedding history and specificity into the generative process itself. This dynamic distinguishes SDA systems by allowing feedback mechanisms that shape pattern evolution, separate from physical energy distributions or equilibrium constraints.
+
+Such an explicit interplay between bottom-up and top-down dynamics in SDA systems suggests a broader principle for understanding complexity: emergent structures can become causal agents that direct further evolution of the system. This perspective helps explain the accumulation of novel order in contexts ranging from prebiotic chemistry to computational networks, where higher-level assemblies (compounds, motifs, or functional components) increasingly govern local interactions, thereby catalyzing the exploration of new possibilities for growth and adaptation.
+
+At times, these dynamics appear teleological, as if the system were ``seeking'' more stable or more complex configurations. Bertalanffy \cite{bertalanffy1968general} cautions that such optimization processes, while suggestive of goal-directed behavior, often reflect nothing more than the natural unfolding of selection, feedback loops, and probability gradients rather than true purposeful design. SDA systems likewise illustrate how feedback from emergent structures can drive the exploration of new system states without implying an external or predetermined goal. By capturing both bottom-up and top-down mechanisms in an evolving distribution, SDA systems provide a model for understanding how complexity can accumulate, whether in prebiotic chemistry or in computational and informational domains, through iterative processes of selection and the continual reshaping of local interactions.
+
+\section{Visualizing SDA Dynamics: Graph Representation and Application Examples}
+
+Building on the intervention experiments that established the causal role of stability in pattern evolution, we now explore alternate representations and applications of SDA systems. While the numerical simulations quantify the emergence of selection pressure and entropy reduction, visualizing these dynamics through network representations offers additional insights into how stability shapes the flow of patterns through the system.
+
+
+\subsection{Dynamic Graph Representation and Token Flow Analysis}
+
+To further investigate the dynamics of SDA systems, we represent the state of the system in a specific generation as a directed graph, where the nodes correspond to base elements and compounds such as $A$, $AB$, $ABA$, $ABC$, and the directed edges represent the interactions that occurred between them in their assembly process. The base elements $A$, $B$, $C$ are replenished in each generation, initiating a cascade of interactions that propagate tokens (shown in Figure~\ref{fig:figure_5} as the count $N$ of instances or copies of each pattern). 
 
 The token flow describes the redistribution of these tokens between nodes in the reaction graph, driven by stability dynamics and interactions. This process is analogous to probability currents in quantum mechanics \cite{feynman1965quantum} and optimal transport \cite{villani2008optimal}, reflecting the macroscopic evolution of the system. The tokens accumulate at nodes based on the flow dynamics, which are governed by the stability of each pattern (shown in Figure~\ref{fig:figure_5} as $S$), influencing the persistence and selection of patterns over successive generations.
 
@@ -398,17 +517,21 @@ The token flow describes the redistribution of these tokens between nodes in the
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{figure_5.png}
-    \caption{Graph representation of a SDSA system showing stability (S), and the number of instances or tokens (N) of each base element and compound.}
+    \caption{Graph representation of a SDA system showing stability (S), and the number of instances or tokens (N) of each base element and compound.}
     \label{fig:figure_5}
 \end{figure}
 
-The dynamic graph in Figure~\ref{fig:figure_5} represents the 7th generation of the simulation shown in Figure~\ref{fig:figure_4}. The distribution of tokens across the graph reveals insights into the self-reinforcing nature of stability in SDSA systems. Nodes with higher stability values (\textit{ e.g.}, $ABCABA$) attract more tokens, leading to the emergence of dominant patterns. This phenomenon reflects a feedback loop: As tokens accumulate at a stable node, it becomes increasingly likely to dominate subsequent interactions, establishing preferential flow paths through the graph. Consequently, the system's token traffic converges to well-defined routes, concentrating resources on a subset of high-stability patterns while marginalizing less stable ones.
+The distribution of tokens across the graph reveals insights into the self-reinforcing nature of stability in SDA systems. Nodes with higher stability values (\textit{e.g.}, $ABCABA$) attract more tokens, leading to the emergence of dominant patterns. This phenomenon reflects a feedback loop: As tokens accumulate at a stable node, it becomes increasingly likely to dominate subsequent interactions, establishing preferential flow paths through the graph. Consequently, the system's token traffic converges to well-defined routes, concentrating resources on a subset of high-stability patterns while marginalizing less stable ones.
 
-However, the graph may change significantly between generations if a new disruptor node emerges in the system. A disruptor node is characterized by a high stability value and strategic positioning within the graph, enabling it to compete with previously dominant nodes for token traffic. This disruptor can reroute flows, effectively redistributing tokens and breaking established dominance patterns. The behavior of token flows in the SDSA system parallels physical phenomena, such as those observed in fluid systems, where a new high-conductivity channel can divert flow away from existing pathways. Similarly, in RC circuits, the introduction of a new low-resistance branch redistributes the current, altering the overall system equilibrium. 
+However, the graph may change significantly between generations if a new disruptor node emerges in the system. A disruptor node is characterized by a high stability value and strategic positioning within the graph, enabling it to compete with previously dominant nodes for token traffic. This disruptor can reroute flows, effectively redistributing tokens and breaking established dominance patterns. The behavior of token flows in the SDA system parallels physical phenomena, such as those observed in fluid systems, where a new high-conductivity channel can divert flow away from existing pathways. Similarly, in RC circuits, the introduction of a new low-resistance branch redistributes the current, altering the overall system equilibrium. 
 
-Dynamic graphs have been used for switch-level simulation of transistor networks \cite{AdlerCAD}, where graph pathways are dynamically determined by the state of the on transistors, enabling specific connections to guide current flow. Similarly, in SDSA systems, token flow is governed by stability and probabilistic interactions, determining which nodes persist and propagate.
+Dynamic graphs have been used for switch-level simulation of transistor networks \cite{AdlerCAD}, where graph pathways are dynamically determined by the state of the on transistors, enabling specific connections to guide current flow. Similarly, in SDA systems, token flow is governed by stability and probabilistic interactions, determining which nodes persist and propagate.
 
-\section{Chemical Example: Iron Oxidation}
+\subsection{Application Examples of SDA Systems}
+
+The SDA framework can be applied to model various real-world processes where stability-driven selection shapes the emergence of patterns. Below, we present two examples from different domains to illustrate the versatility of this approach.
+
+\subsubsection{Chemical Example: Iron Oxidation}
 
 \begin{figure}[h]
     \centering
@@ -417,59 +540,45 @@ Dynamic graphs have been used for switch-level simulation of transistor networks
     \label{fig:figure_6}
 \end{figure}
 
-The principles of Stability-Driven Stochastic Assembly (SDSA) systems can be illustrated through the oxidation of iron, a realistic and naturally occurring chemical process. As shown in Figure~\ref{fig:figure_6}, iron oxidation (\(Fe\)) proceeds through a network of reactions driven by stability constraints. Oxygen (\(O\)) forms diatomic oxygen (\(O_2\)), which reacts with iron to produce a series of oxides, including iron(II) oxide (\(FeO\)), iron(III) oxide (\(Fe_2O_3\), hematite), and iron(II,III) oxide (\(Fe_3O_4\), magnetite). These reactions represent a progression from less stable intermediates to thermodynamically favored compounds. Competing pathways, such as partial oxidation or the formation of unstable intermediates, illustrate how stability shapes the evolution of the system, favoring reactions that lead to more persistent and energetically favorable products.
+The principles of Stability-Driven Assembly can be illustrated through the oxidation of iron, a realistic and naturally occurring chemical process. As shown in Figure~\ref{fig:figure_6}, iron oxidation (\(Fe\)) proceeds through a network of reactions driven by stability constraints. Oxygen (\(O\)) forms diatomic oxygen (\(O_2\)), which reacts with iron to produce a series of oxides, including iron(II) oxide (\(FeO\)), iron(III) oxide (\(Fe_2O_3\), hematite), and iron(II,III) oxide (\(Fe_3O_4\), magnetite). These reactions represent a progression from less stable intermediates to thermodynamically favored compounds. Competing pathways, such as partial oxidation or the formation of unstable intermediates, illustrate how stability shapes the evolution of the system, favoring reactions that lead to more persistent and energetically favorable products.
 
-In the SDSA framework, node stability \(S(p)\) quantifies the persistence of each compound, with higher stability values assigned to products such as hematite and magnetite due to their robust bonding and lower susceptibility to dissociation. This reaction network provides a testable system for validating the role of stability in driving reaction pathways. By simulating token flow dynamics based on stability values, the framework captures how high-stability compounds emerge and dominate over successive generations, aligning with experimental observations of oxidation processes.
+In the SDA framework, node stability \(S(p)\) quantifies the persistence of each compound, with higher stability values assigned to products such as hematite and magnetite due to their robust bonding and lower susceptibility to dissociation. This reaction network provides a testable system for validating the role of stability in driving reaction pathways. By simulating token flow dynamics based on stability values, the framework captures how high-stability compounds emerge and dominate over successive generations, aligning with experimental observations of oxidation processes.
 
-
-
-
-\section{Economic Example: Industry Ecosystem as a SDSA System}
-
-This example illustrates a Stability-Driven Stochastic Assembly (SDSA) system applied to an economic context, where base elements represent different types of businesses. Manufacturers (A), retailers (B), and logistics providers (C) act as base elements with stabilities \( S_A, S_B, S_C \) reflecting their persistence in the market. Through successive interactions, these base elements form partnerships \( AB \), \( AC \), \( BC \) and evolve into integrated networks \( ABAC \), \( ABBC \), as shown in Figure~\ref{fig:figure_9}. Each stage corresponds to increasingly complex collaborations, where stability-driven selection ensures the persistence of dominant nodes. 
+\subsubsection{Economic Example: Industry Ecosystem as a SDA System}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{figure_9.png}
-    \caption{Industry ecosystem represented as a SDSA system, showing the evolution from base businesses (\( A, B, C \)) to partnerships and stable integrated networks (\( ABAC, ABBC \)).}
+    \caption{Industry ecosystem represented as a SDA system, showing the evolution from base businesses (\( A, B, C \)) to partnerships and stable integrated networks (\( ABAC, ABBC \)).}
     \label{fig:figure_9}
 \end{figure}
 
+This example illustrates a Stability-Driven Assembly system applied to an economic context, where the base elements represent different types of business. Manufacturers (A), retailers (B), and logistics providers (C) act as base elements with stabilities \( S_A, S_B, S_C \) reflecting their persistence in the market. Through successive interactions, these base elements form partnerships \( AB \), \( AC \), \( BC \) and evolve into integrated networks \( ABAC \), \( ABBC \), as shown in Figure~\ref{fig:figure_9}. Each stage corresponds to increasingly complex collaborations, where stability-driven selection ensures the persistence of dominant nodes. 
+
 Stable nodes, such as \( AB \) (manufacturer-retailer) and \( ABBC \) (retail-driven networks), act as attractors, accumulating resources (tokens) over generations. Less stable nodes, including failed ventures (\( S=0 \)), dissipate quickly, redistributing tokens to more viable configurations. The economic analogy emphasizes how stability influences token flow, resource allocation, and the formation of hierarchical networks in complex systems. The tokens in this graph (individual companies) will naturally flow to configurations that are more stable and persistent, representing more business opportunities.
 
-\section{Top-Down vs.\ Bottom-Up Dynamics in SDSA Systems}
-\label{sec:topdown-bottomup}
-
-Figure~\ref{fig:figure_10} illustrates the interplay between top-down and bottom-up causation in Stability-Driven Stochastic Assembly (SDSA) systems, where the top-down influence emerges from the increasing relative abundance of stable patterns directing subsequent interactions, while bottom-up processes arise from the probabilistic assembly of base elements into intermediate and complex patterns, creating a dynamic feedback loop that drives the evolution of information and complexity.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\linewidth,height=0.7\linewidth]{figure_10.png}
-    \caption{Bottom-up and Top-down causation in SDSA systems}
-    \label{fig:figure_10}
-\end{figure}
-
-Once certain patterns become dominant, they exert a top-down influence on subsequent generations. These higher-level persistent structures shape future interactions by catalyzing or constraining the formation of new patterns. Hence, SDSA systems do not just accumulate complexity through local rules; they also incorporate feedback from emergent structures that guide (or ``select for'') new configurations. The presence of memory and evolutionary history in these feedback loops distinguishes SDSA systems from frameworks in which higher-level states simply describe aggregates without influencing the underlying microstates.
-
-The contrast with traditional statistical mechanics is instructive \cite{landau1980statistical}. In statistical mechanics, macrostates (e.g., temperature, pressure) represent aggregate properties of microstates but do not directly influence the fundamental interaction rules among particles. In SDSA systems, however, dominant patterns exert a causal influence on micro-level interactions, embedding history and specificity into the generative process itself. This dynamic distinguishes SDSA systems by allowing feedback mechanisms that shape pattern evolution, separate from physical energy distributions or equilibrium constraints.
-
-Such an explicit interplay between bottom-up and top-down dynamics in SDSA systems suggests a broader principle for understanding complexity: emergent structures can become causal agents that direct further evolution of the system. This perspective helps explain the accumulation of novel order in contexts ranging from prebiotic chemistry to computational networks, where higher-level assemblies (compounds, motifs, or functional components) increasingly govern local interactions, thereby catalyzing the exploration of new possibilities for growth and adaptation.
-
-At times, these dynamics appear teleological, as if the system were ``seeking'' more stable or more complex configurations. Bertalanffy \cite{bertalanffy1968general} cautions that such optimization processes, while suggestive of goal-directed behavior, often reflect nothing more than the natural unfolding of selection, feedback loops, and probability gradients rather than true purposeful design. SDSA systems likewise illustrate how feedback from emergent structures can drive the exploration of new system states without implying an external or predetermined goal. By capturing both bottom-up and top-down mechanisms in an evolving distribution, SDSA systems provide a model for understanding how complexity can accumulate, whether in prebiotic chemistry or in computational and informational domains, through iterative processes of selection and the continual reshaping of local interactions.
+These examples from chemistry and economics demonstrate how the SDA framework provides a unifying perspective on pattern formation and selection across diverse domains. In each case, stability serves as the key driver of selection, guiding system evolution without requiring explicit replication mechanisms. The graph representation offers an intuitive visualization of these dynamics, highlighting how token flows naturally converge toward stable configurations through purely probabilistic processes.
 
 
 \section{Conclusion}
 
-SDSA systems provide a simple framework for understanding the emergence of complexity and order in systems governed by probabilistic interactions and stability-driven selection. By abstracting away specific physical laws, these systems offer a testable and generalizable model applicable to a wide range of phenomena. 
+Stability-Driven Assembly (SDA) systems provide a rigorous framework for understanding the emergence of complexity and order in systems governed by probabilistic interactions and stability-driven selection. Through both mathematical analysis and computational experiments, we have demonstrated how differential stability alone can generate selection pressure, driving systems toward lower-entropy states characterized by the dominance of stable patterns.
 
-The iterative interaction of elements in SDSA systems may help explain the evolution of matter and energy. From the aggregation of quarks into elementary particles, to the evolution of molecules and chemistry. The periodic table, for example, organizes elements based on properties such as ionization energy, chemical reactivity, etc. These properties bias element interactions, favoring stable configurations. For example, \( H_2 \) forms in dense regions of space where hydrogen atoms collide and bond. It is stable because of strong covalent bonds and serves as a building block for stars. This reflects the dominance of stability-driven patterns, akin to how SDSA systems reinforce stable patterns over generations. 
+Our intervention experiments conclusively established the causal relationship between stability constraints and system evolution. When transitioning from unconstrained to stability-driven regimes, entropy decreased rapidly as high-stability patterns came to dominate the population. Conversely, removing stability constraints reversed these effects, confirming that stability functions as a control parameter that shapes the evolutionary landscape. These findings substantiate our theoretical prediction that selection can emerge spontaneously from stability differences, without requiring explicit replication mechanisms.
 
-SDSA systems suggest that evolution may be a universal property of random populations with large stability imbalances, not restricted to living organisms. By demonstrating how random populations with stability-driven interactions naturally evolve toward order, this framework proposes that perhaps the biological evolution of individual organisms is a later stage in such dynamics. Recent findings suggest that stability-driven self-assembly mechanisms may play a role in biotic systems, highlighting the possible connection between abiotic and biological evolution \cite{davies2022selfassembly}.
+The dynamic graph representation and token flow analysis further elucidated how stability-driven selection operates at the system level. By visualizing the flow of tokens through reaction networks, we observed how high-stability nodes naturally accumulate resources, establishing preferential pathways that reinforce their dominance over successive generations. This perspective bridges micro-level interactions with macro-level pattern distributions, revealing how local stability differences translate into global order.
 
-SDSA systems may provide a non-mystical explanation of the origins of order and information. Unlike Tegmark's \cite{tegmark2008mathematical} assertion that physical reality is a purely mathematical structure, or Wolfram's \cite{wolfram2020fundamental} derivation of physical laws from abstract cellular automata, SDSA systems remain firmly within observable, probabilistic mechanisms of selection. Similarly, while Bohm's ontological interpretation of quantum mechanics \cite{bohm1980wholeness} proposes an implicate order from which observable reality unfolds as a mystical pilot wave, SDSA systems focus on generational updates grounded in explicit and testable mechanisms of interaction and population dynamics.
+The interplay between bottom-up and top-down causation in SDA systems illuminates a broader principle for understanding emergent complexity across domains. As stable patterns persist and become more prevalent, they exert increasing influence on subsequent interactions, creating feedback loops that further amplify their representation. This recursive dynamic distinguishes SDA systems from frameworks in which higher-level states merely describe, rather than causally influence, lower-level processes.
 
-SDSA systems still leave open the question of fine-tuning. Fine-tuned imbalances, such as those described in Rees' \textit{Just Six Numbers} \cite{rees2000just} and Davies' \textit{The Goldilocks Enigma} \cite{davies2006goldilocks}, exemplify how asymmetries in fundamental physical constants enable complexity across scales. Similarly, in SDSA systems,  non-uniform stability biases interactions toward forming persistent ordered patterns. This connection reinforces the idea that evolution, driven by imbalance and selection, operates universally, bridging the emergence of complexity from the cosmological to molecular scales. If further empirical evidence shows that large stability imbalances play a key role in the evolution of the universe, then one might be tempted to say that God does indeed play dice, but the dice are loaded.
+Applications of the SDA framework to diverse domains—from chemical reactions like iron oxidation to economic networks of business partnerships—demonstrate its broad explanatory power. In each case, stability-driven selection provides a unifying mechanism for understanding how order emerges from probabilistic interactions governed by differential persistence.
 
+SDA systems suggest that evolution may be a more universal property than previously recognized, potentially operating in any system with large stability imbalances. By demonstrating how random populations with stability-driven interactions naturally evolve toward order, this framework proposes that biological evolution may represent a specialized instance of a more general phenomenon. Recent findings suggest that stability-driven self-assembly mechanisms play a role in biotic systems \cite{davies2022selfassembly}, highlighting possible connections between abiotic and biological evolution.
+
+Unlike approaches that invoke abstract mathematical structures \cite{tegmark2008mathematical}, computational universality \cite{wolfram2020fundamental}, or implicit order \cite{bohm1980wholeness}, SDA systems remain grounded in observable, testable mechanisms of selection. The framework offers a non-mystical explanation for the origins of information and complexity by showing how they can emerge naturally from differential stability within probabilistic systems.
+
+The question of why certain patterns possess higher stability than others—analogous to the fine-tuning problem in cosmology \cite{rees2000just, davies2006goldilocks}—remains open for further investigation. Just as asymmetries in fundamental physical constants enable complexity across cosmic scales, non-uniform stability in SDA systems biases interactions toward persistent ordered patterns. This parallel suggests that evolution, driven by imbalance and selection, may operate universally, potentially bridging the emergence of complexity from molecular to cosmological scales.
+
+Future work should focus on experimental validation of SDA predictions in physical and chemical systems, development of more sophisticated mathematical models incorporating energetic constraints, and exploration of how stability-driven selection interacts with other evolutionary mechanisms. By continuing to refine this framework, we may gain deeper insights into the fundamental processes that drive the emergence of complexity and information throughout our universe.
 
 %\begin{listing}[H]
 %\caption{Title of the listing}
@@ -714,7 +823,7 @@ Davies, P. \textit{The Goldilocks Enigma: Why is the Universe Just Right for Lif
 
 \section{Stability Imbalances in Nature}
 
-The abstract SDSA model is motivated by the vast stability disparities of the universe, from fleeting nuclear states to gravitationally bound structures that last billions of years. These variations in binding energy, environmental interactions, and system resilience may dictate the formation and persistence of low-entropy structures, from molecular networks to planetary systems. Covalent bonds gain longevity in extended lattices such as diamond and graphene, while geological formations evolve over millions of years under pressure and erosion. On cosmological scales, gravitationally bound systems, including planetary and galactic structures, persist across epochs, underscoring the fundamental role of stability in natural organization.
+The abstract SDA model is motivated by the vast stability disparities of the universe, from fleeting nuclear states to gravitationally bound structures that last billions of years. These variations in binding energy, environmental interactions, and system resilience may dictate the formation and persistence of low-entropy structures, from molecular networks to planetary systems. Covalent bonds gain longevity in extended lattices such as diamond and graphene, while geological formations evolve over millions of years under pressure and erosion. On cosmological scales, gravitationally bound systems, including planetary and galactic structures, persist across epochs, underscoring the fundamental role of stability in natural organization.
 
 Beyond simple bond strength, the persistence of structures is influenced by factors such as spatial arrangements, catalytic reinforcement, feedback loops, and hierarchical assembly. Biological molecules, for instance, often derive stability not merely from strong covalent bonds but also from folded conformations, cooperative interactions, and self-repair mechanisms. Similarly, geological formations maintain their integrity over deep time due to self-reinforcing stress distributions and dynamic equilibrium with their environment. Table~\ref{tab:binding-forces} summarizes a wider range of stability-driven phenomena, highlighting their characteristic strengths and lifetimes on multiple scales.
 
@@ -738,10 +847,10 @@ Gravitational Systems (Planets, Stars) & Millions to billions of years \\
 \end{tabular}
 \end{table}
 
-Table \ref{tab:binding-forces} illustrates how stability is not solely a function of bond strength but arises from evolved hierarchical structures, environmental effects, and self-reinforcing dynamics. In a SDSA system, high-stability patterns accumulate over generations, biasing the reaction landscape towards configurations that persist. This provides a simplified conceptual model for understanding how long-lived low-entropy structures emerge in nature through differential stability selection, whether in chemical systems, geological formations, or cosmic architecture.
+Table \ref{tab:binding-forces} illustrates how stability is not solely a function of bond strength but arises from evolved hierarchical structures, environmental effects, and self-reinforcing dynamics. In a SDA system, high-stability patterns accumulate over generations, biasing the reaction landscape towards configurations that persist. This provides a simplified conceptual model for understanding how long-lived low-entropy structures emerge in nature through differential stability selection, whether in chemical systems, geological formations, or cosmic architecture.
 
 
-\section{Mass Action Kinetics and SDSA Systems}
+\section{Mass Action Kinetics and SDA Systems}
 \label{subsec:mak-forward-limitations}
 
 Mass Action Kinetics (MAK) \cite{TuranyiTomlin2014} provides deterministic rate equations for chemical reactions, such as
@@ -750,7 +859,7 @@ Mass Action Kinetics (MAK) \cite{TuranyiTomlin2014} provides deterministic rate 
 \]
 where $[A]$ and $[B]$ represent concentrations and $k$ is a rate constant. These equations capture conservation laws for mass and energy and can reflect selection processes under certain conditions. More recent work such as Chemical Organization Theory (COT) \cite{DittrichFenizio2005} emphasizes the finding of closed and self-maintaining collections of species in a fixed reaction network. Assembly Theory (AT) has proposed the use of MAK-like forward models to link object production to assembly indices and copy numbers \cite{walker2023nature}.
 
-MAK inherently allows reactions to run both forward and backward with fixed-rate laws, posing a challenge for assembly frameworks like AT and SDSA that emphasize net forward construction. Although MAK excels at describing known reaction networks under equilibrium or near-equilibrium assumptions, it lacks a mechanism for the open discovery of novel compounds central to BA’s approach.
+MAK inherently allows reactions to run both forward and backward with fixed-rate laws, posing a challenge for assembly frameworks like AT and SDA that emphasize net forward construction. Although MAK excels at describing known reaction networks under equilibrium or near-equilibrium assumptions, it lacks a mechanism for the open discovery of novel compounds central to BA’s approach.
 
 \subsection{Analogy to Electronic Circuit Simulations}
 \label{subsec:spice-analogy}
@@ -761,36 +870,40 @@ $\dot{\mathbf{v}} = \mathbf{A}\,\mathbf{v} + \mathbf{b}$, with \(\mathbf{A}\) ca
 
 Higher-level abstractions, such as switch-level simulation \cite{AdlerCAD}, forego solving the full system of ODEs, instead tracking discrete state transitions. At an even coarser gate level \cite{FeynmanComp}, circuits are modeled as idealized logical operations, ignoring continuous voltage dynamics.
 
-SDSA systems adopt a similarly abstracted perspective: rather than modeling bidirectional reaction flows explicitly, they capture dominant generational updates, analogous to switch- or gate-level simulation in circuits. Stability-driven selection replaces continuous-time reversibility, focusing on net forward assembly steps that determine the persistence and evolution of patterns.
+SDA systems adopt a similarly abstracted perspective: rather than modeling bidirectional reaction flows explicitly, they capture dominant generational updates, analogous to switch- or gate-level simulation in circuits. Stability-driven selection replaces continuous-time reversibility, focusing on net forward assembly steps that determine the persistence and evolution of patterns.
 
-\section{Organic Chemistry Examples and Their SDSA System Interpretations}
-\label{sec:organic-ba-examples}
+\section{Organic Chemistry Examples of Stability-Driven Assembly}
+\label{sec:organic-sda-examples}
 
-Two reaction graphs from organic chemistry provide illustrative cases to understand how Stability-Driven Stochastic Assembly (SDSA) systems can model complex pathways at a high level. Although neither example specifically reflects a continuous-flow stirred tank reactor (CFSTR), both showcase how the concept of node stability plays a role in the formation and persistence of certain molecular arrangements. By assigning relative stability values to each species based on physical, chemical, and catalytic considerations, one can track how the resulting population of intermediates evolves according to the generational dynamics of SDSA systems.
+To further illustrate how SDA principles operate in specific chemical contexts, we briefly examine two reaction networks from organic chemistry where stability considerations guide pattern evolution. These examples demonstrate how stability-driven selection helps explain the preferential formation of certain complex molecules in reaction spaces with numerous possible pathways.
+
+\subsection{Carbon Nanostructure Assembly}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth,height=0.55\textwidth]{figure_7.png}
-    \caption{Reaction graph for possible Carbon Nanostructure Assembly}
+    \includegraphics[width=0.9\textwidth]{figure_7.png}
+    \caption{Reaction graph for carbon nanostructure assembly, showing progression from carbon monomers to stable nanotube configurations.}
     \label{fig:figure_7}
 \end{figure}
 
-Figure~\ref{fig:figure_7} illustrates an abstract reaction graph showing the progressive assembly of carbon-based structures, starting from simple carbon monomers (\( \text{C} \)) and hydrogen atoms (\( \text{H} \)). In the early stages, carbon atoms bond to form dimers (\( \text{C}_2 \)) or small hydrocarbons such as ethylene (\( \text{C}_2\text{H}_4 \)). Through additional interactions and stabilization processes, these smaller molecules transform into increasingly complex structures, such as benzene (\( \text{C}_6\text{H}_6 \)), which serves as a precursor for planar graphene sheets (\( \text{C}_n \)). Ultimately, graphene sheets curl into carbon nanotubes (\( \text{C}_n\text{H}_m \)), high-stability configurations characterized by their exceptional mechanical and electrical properties. 
+Figure~\ref{fig:figure_7} illustrates the progressive assembly of carbon-based structures from simple monomers to complex nanotubes. Carbon atoms (\( \text{C} \)) and hydrogen atoms (\( \text{H} \)) initially form dimers and simple hydrocarbons, which then transform into increasingly complex structures such as benzene (\( \text{C}_6\text{H}_6 \)) and graphene sheets. The pathway culminates in carbon nanotubes, which represent high-stability configurations characterized by exceptional structural integrity.
 
-The main pathway emphasizes the gradual increase in structural complexity and stability. Alongside this progression, less stable intermediates, such as defective graphene or transient molecules, may arise, but typically do not persist due to lower stability. These transient species reflect pathways that are accessible in the reaction space, but are pruned over successive iterations. Here, stability \( S(p) \) plays a central role in determining the persistence and influence of each compound. Simple elements (\( \text{C} \), \( \text{H} \)) and early products (\( \text{C}_2 \), \( \text{C}_2\text{H}_4 \)) possess baseline stability values, representing their shorter lifetimes and higher turnover rates. As more complex compounds are formed, their stability parameters increase, reflecting stronger bonding, lower dissociation rates, and greater resistance to perturbation. Generational updates in a SDSA model dynamically favor the accumulation of these high-stability patterns, leading to the dominance of advanced nanostructures. In contrast, low-stability pathways fade over time, illustrating how stability-driven selection sculpts the molecular landscape and guides the emergence of ordered, complex systems.
+From an SDA perspective, the stability parameters for compounds increase as the reaction progresses toward more complex structures, reflecting stronger bonding and greater resistance to dissociation. Early products like (\( \text{C}_2 \)) and (\( \text{C}_2\text{H}_4 \)) have relatively short lifetimes, while advanced nanostructures possess significantly higher stability values. This differential stability guides the system toward configurations that persist longer, illustrating how stability-driven selection can shape molecular evolution even without explicit catalytic processes.
 
+\subsection{Pre-RNA Sugar Assembly}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth,height=0.4\textwidth]{figure_8.png}
-    \caption{Reaction graph for possible pre-RNA Sugar Assembly}
+    \includegraphics[width=0.9\textwidth]{figure_8.png}
+    \caption{Reaction graph for pre-RNA sugar assembly, showing the formation pathway from formaldehyde to ribose.}
     \label{fig:figure_8}
 \end{figure}
 
-Figure~\ref{fig:figure_8} illustrates a simplified reaction network in which small carbonyl-containing molecules, such as formaldehyde (CH$_2$O), undergo pairwise interactions to form sugars of increasing complexity. The pathway begins with the condensation of formaldehyde into glycolaldehyde (C$_2$H$_4$O$_2$), which can interact further to form intermediate compounds, such as a dimer of formaldehyde and glycolaldehyde. These intermediates then serve as precursors to ribose (C$_5$H$_{10}$O$_5$), a key sugar and a crucial building block for RNA. Alongside the main reaction pathway, side reactions lead to the formation of less stable by-products, such as branched sugars, which typically dissipate due to their lower persistence.
+Figure~\ref{fig:figure_8} presents a simplified reaction network for the formation of ribose, a crucial building block for RNA. The pathway begins with small carbonyl-containing molecules like formaldehyde (CH$_2$O) that condense to form glycolaldehyde (C$_2$H$_4$O$_2$). Through further interactions, these intermediates serve as precursors to ribose (C$_5$H$_{10}$O$_5$). This example is particularly relevant to origins-of-life research, as it illustrates how complex building blocks for genetic polymers might emerge through stability-driven selection.
 
-These two examples from organic chemistry highlight how stability may play a role in complex reaction graphs. The SDSA perspective supplements conventional kinetic modeling by focusing on net generational outcomes and selective retention, rather than detailing every reversible step. In doing so, SDSA systems reveal how certain ``attractor'' molecules or assemblies can emerge in an otherwise large and branching reaction space, reinforcing the view that stability-driven selection is a powerful force in shaping molecular evolution. However, it is important to acknowledge the limitations of isolating stability as the sole selection factor. In physical systems, molecular persistence is influenced not only by intrinsic stability but also by energy barriers, temperature, catalytic effects, reaction kinetics, and external environmental constraints. Although SDSA systems provide a useful conceptual model, more research is required to quantify the relative contribution of stability compared to other physical and chemical influences in determining the persistence and evolution of molecular structures.
+Both reaction networks demonstrate how SDA systems can model complex chemical pathways by focusing on the stability-determined persistence of intermediates. Rather than tracking every reversible reaction step, the SDA approach highlights how certain "attractor" molecules emerge in branching reaction spaces due to their enhanced stability. This perspective complements traditional kinetic modeling by emphasizing net generational outcomes and selective retention.
 
+It is important to note that in real chemical systems, molecular persistence is influenced by multiple factors beyond intrinsic stability, including energy barriers, temperature, catalytic effects, and external constraints. While SDA systems provide a useful conceptual model, further research is needed to quantify the relative contribution of stability compared to other physical and chemical factors in determining molecular evolution pathways.
 
 
 \end{document}
