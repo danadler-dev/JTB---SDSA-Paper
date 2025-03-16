@@ -145,9 +145,9 @@ Stability-driven selection; Abiotic evolution; Pattern formation; Emergent compl
 
 \section{Introduction}
 
-"\textit{Selection for longevity becomes inseparable from selection for propagation. What persists has, by definition, a greater opportunity to propagate its structure.}" This observation by Stuart Kauffman \cite{kauffman1995home} identifies a fundamental principle that may bridge the gap between inanimate physical processes and biological evolution. While the mechanisms of biological evolution through natural selection are well established \cite{fisher1930genetical, dawkins1976selfish}, the emergence of selection itself—prior to true replication—remains enigmatic.
+"\textit{Selection for longevity becomes inseparable from selection for propagation. What persists has, by definition, a greater opportunity to propagate its structure.}" This observation by Stuart Kauffman \cite{kauffman1995home} identifies a fundamental principle that may bridge the gap between inanimate physical processes and biological evolution. While the mechanisms of biological evolution through natural selection are well established \cite{fisher1930genetical}, the emergence of selection itself—prior to true replication—remains enigmatic.
 
-In inanimate physical systems, patterns persist according to their stability under prevailing conditions. A carbon lattice in diamond form persists longer than graphite under high pressure; certain molecular configurations outlast others in various chemical environments \cite{rees2000just, davies2006goldilocks}. This differential persistence creates an implicit selection mechanism—stable configurations naturally become more prevalent over time simply by outlasting less stable alternatives. This fundamental principle of stability-driven selection may have preceded and enabled the emergence of biological selection \cite{hordijk2012autocatalytic, nghe2015prebiotic}.
+In inanimate physical systems, patterns persist according to their stability under prevailing conditions. A carbon lattice in diamond form persists longer than graphite under high pressure; certain molecular configurations outlast others in various chemical environments \cite{davies2006goldilocks}. This differential persistence creates an implicit selection mechanism—stable configurations naturally become more prevalent over time simply by outlasting less stable alternatives. This fundamental principle of stability-driven selection may have preceded and enabled the emergence of biological selection \cite{hordijk2012autocatalytic, nghe2015prebiotic}.
 
 The study of such selection mechanisms spans multiple scientific disciplines. Algorithmic complexity \cite{kolmogorov1965complexity, chaitin1977algorithmic, solomonoff1964formal} and Shannon's information theory \cite{shannon1948mathematical} provide tools to quantify patterns and information, but do not explain how information emerges from physical systems. Constructor theory \cite{deutsch2013constructor} reframes physical laws in terms of possible transformations, while Assembly Theory (AT) \cite{walker2023nature} quantifies complexity through the minimal steps needed to construct an object, yet provides a retrospective rather than dynamic model of selection in real time.
 
@@ -287,29 +287,29 @@ Where $\Delta H_{create}$ represents the entropy change from creation processes 
 
 \subsection{Simulation Results}
 
-Our simulations comparing SDA systems to unconstrained systems confirm that SDA systems consistently maintain lower entropy due to stability-driven selection (Figure~\ref{fig:entropy_comparison}).
+Our simulations comparing SDA systems to unconstrained systems confirm that SDA systems consistently maintain lower entropy due to stability-driven selection (Figure~\ref{fig:figure_3}).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{entropy_comparison}
+    \includegraphics[width=0.7\textwidth]{figure_3.png}
     \caption{The SDA system consistently maintains lower entropy due to selection.}
     \label{fig:entropy_comparison}
 \end{figure}
 
-SDA systems exhibit significantly different pattern distributions, with high-stability patterns dominating the population (Figure~\ref{fig:pattern_distribution}).
+SDA systems exhibit significantly different pattern distributions, with high-stability patterns dominating the population (Figure~\ref{fig:figure_4}).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{pattern_distribution}
+    \includegraphics[width=0.8\textwidth]{figure_4}
     \caption{The SDA system (right) shows dominance of a few stable patterns, while the unconstrained system (left) exhibits a more uniform distribution.}
     \label{fig:pattern_distribution}
 \end{figure}
 
-Interestingly, SDA systems with multiple high-stability patterns often exhibit oscillatory behavior in entropy over time (Figure~\ref{fig:entropy_oscillations}).
+Interestingly, SDA systems with multiple high-stability patterns often exhibit oscillatory behavior in entropy over time (Figure~\ref{fig:figure_5}).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{entropy_oscillations}
+    \includegraphics[width=0.7\textwidth]{figure_5}
     \caption{Oscillatory entropy dynamics in an SDA system.}
     \label{fig:entropy_oscillations}
 \end{figure}
@@ -356,7 +356,7 @@ When transitioning from an unconstrained to a stability-driven regime, we observ
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{unconstrained_to_sda_entropy.png}
+    \includegraphics[width=0.7\textwidth]{figure_6.png}
     \caption{Entropy evolution when transitioning from Unconstrained $\to$ SDA system. The vertical dashed line marks the intervention point.}
     \label{fig:u2s-entropy}
 \end{figure}
@@ -365,7 +365,7 @@ Before intervention, the system exhibited the high entropy characteristic of an 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{unconstrained_to_sda_population_comparison.png}
+    \includegraphics[width=0.7\textwidth]{figure_7.png}
     \caption{Pattern composition before (left) and after (right) transitioning from an unconstrained to an SDA system. Bar colors represent stability values.}
     \label{fig:u2s-patterns}
 \end{figure}
@@ -378,7 +378,7 @@ To establish bidirectional causality, we examined the transition from a stabilit
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{sda_to_unconstrained_entropy.png}
+    \includegraphics[width=0.5\textwidth]{figure_8.png}
     \caption{Entropy evolution when transitioning from an SDA $\to$ an unconstrained system.}
     \label{fig:s2u-entropy}
 \end{figure}
@@ -387,7 +387,7 @@ Before intervention, the SDA system oscillated around low entropy values of ~4 b
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{sda_to_unconstrained_population_comparison.png}
+    \includegraphics[width=0.8\textwidth]{figure_9.png}
     \caption{Pattern composition before (left) and after (right) transitioning from an SDA to an unconstrained system. Bar colors represent stability values in the SDA phase (left) and pattern length in the unconstrained phase (right).}
     \label{fig:s2u-patterns}
 \end{figure}
@@ -434,7 +434,7 @@ SDA systems can be visualized as directed graphs where nodes represent patterns 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\linewidth]{figure_5.png}
+    \includegraphics[width=0.7\linewidth]{figure_11.png}
     \caption{Graph representation of a SDA system showing stability (S) and the number of instances or tokens (N) of each pattern.}
     \label{fig:figure_5}
 \end{figure}
@@ -449,18 +449,18 @@ The graph structure may undergo significant reorganization if a "disruptor node"
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth,height=0.4\textwidth]{figure_6.png}
+    \includegraphics[width=0.8\textwidth,height=0.2\textwidth]{figure_12.png}
     \caption{Reaction network for iron oxidation, illustrating the formation of stable and intermediate compounds under stability constraints.}
-    \label{fig:figure_6}
+    \label{fig:figure_12}
 \end{figure}
 
-Figure~\ref{fig:figure_6} illustrates iron oxidation as an SDA system, where oxygen (\(O_2\)) reacts with iron to produce increasingly stable oxides, including iron(II) oxide (\(FeO\)), iron(III) oxide (\(Fe_2O_3\), hematite), and iron(II,III) oxide (\(Fe_3O_4\), magnetite). Stability values (\(S(p)\)) quantify each compound's persistence, with higher values assigned to products with robust bonding and lower susceptibility to dissociation. This reaction network demonstrates how stability shapes chemical pathways, favoring reactions that lead to more persistent products.
+Figure~\ref{fig:figure_12} illustrates iron oxidation as an SDA system, where oxygen (\(O_2\)) reacts with iron to produce increasingly stable oxides, including iron(II) oxide (\(FeO\)), iron(III) oxide (\(Fe_2O_3\), hematite), and iron(II,III) oxide (\(Fe_3O_4\), magnetite). Stability values (\(S(p)\)) quantify each compound's persistence, with higher values assigned to products with robust bonding and lower susceptibility to dissociation. This reaction network demonstrates how stability shapes chemical pathways, favoring reactions that lead to more persistent products.
 
 \subsubsection{Economic Example: Industry Ecosystem}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{figure_9.png}
+    \includegraphics[width=0.8\textwidth]{figure_13.png}
     \caption{Industry ecosystem represented as an SDA system, showing evolution from base businesses to integrated networks.}
     \label{fig:figure_9}
 \end{figure}
@@ -554,8 +554,11 @@ Future work should focus on experimental validation in physical systems, mathema
 \bibitem{kauffman1995home}
 Kauffman, S. \textit{At Home in the Universe: The Search for the Laws of Self-Organization and Complexity}; Oxford University Press: New York, NY, USA, 1995.
 
-\bibitem{dawkins1976selfish}
-Dawkins, R. \textit{The Selfish Gene}; Oxford University Press: Oxford, UK, 1976.
+\bibitem{fisher1930genetical}
+Fisher, R.A. \textit{The Genetical Theory of Natural Selection}; Oxford University Press: Oxford, UK, 1930.
+
+\bibitem{davies2006goldilocks}
+Davies, P. \textit{The Goldilocks Enigma: Why is the Universe Just Right for Life?}; Allen Lane: London, UK, 2006.
 
 \bibitem{hordijk2012autocatalytic}
 Hordijk, W.; Steel, M.; Kauffman, S. The structure of autocatalytic sets: Evolvability, enablement, and emergence. \textit{Acta Biotheoretica} \textbf{2012}, \textit{60}, 379–392.
@@ -563,80 +566,14 @@ Hordijk, W.; Steel, M.; Kauffman, S. The structure of autocatalytic sets: Evolva
 \bibitem{nghe2015prebiotic}
 Nghe, P.; Hordijk, W.; Kauffman, S.A.; Walker, S.I.; Schmidt, F.J.; Kemble, H.; Yeates, J.A.; Lehman, N. Prebiotic network evolution: Six key parameters. \textit{Molecular BioSystems} \textbf{2015}, \textit{11}, 3206–3217.
 
-\bibitem{pross2016life}
-Pross, A. \textit{What is Life? How Chemistry Becomes Biology}; Oxford University Press: Oxford, UK, 2016.
-
-\bibitem{england2015dissipative}
-England, J.L. Dissipative adaptation in driven self-assembly. \textit{Nature Nanotechnology} \textbf{2015}, \textit{10}, 919–923.
-
-\bibitem{wu2012origin}
-Wu, M.; Higgs, P.G. Origin of self-replicating biopolymers: Autocatalytic feedback can trump power law replication. \textit{Journal of Molecular Evolution} \textbf{2012}, \textit{74}, 91–102.
-
-\bibitem{prigogine1977self}
-Prigogine, I.; Nicolis, G. \textit{Self-Organization in Non-Equilibrium Systems}; Wiley: New York, NY, USA, 1977.
-
-\bibitem{nicolis1977self}
-Nicolis, G.; Prigogine, I. \textit{Self-Organization in Nonequilibrium Systems: From Dissipative Structures to Order through Fluctuations}; Wiley: New York, NY, USA, 1977.
-
-\bibitem{ellis2012top}
-Ellis, G.F.R. Top-down causation and emergence: Some comments on mechanisms. \textit{Interface Focus} \textbf{2012}, \textit{2}, 126–140.
-
-\bibitem{ball1999self}
-Ball, P. \textit{The Self-Made Tapestry: Pattern Formation in Nature}; Oxford University Press: New York, NY, USA, 1999.
-
-\bibitem{kelso1997dynamic}
-Kelso, J.A.S. \textit{Dynamic Patterns: The Self-Organization of Brain and Behavior}; MIT Press: Cambridge, MA, USA, 1997.
-
-\bibitem{blackmond2010chiral}
-Blackmond, D.G. The origin of biological homochirality. \textit{Cold Spring Harbor Perspectives in Biology} \textbf{2010}, \textit{2}, a002147.
-
-\bibitem{TuranyiTomlin2014}
-Turányi, T.; Tomlin, A.S. \textit{Analysis of Kinetic Reaction Mechanisms}; Springer: Berlin, Germany, 2014.
-
-\bibitem{DittrichFenizio2005}
-Dittrich, P.; di Fenizio, P.S. Chemical organization theory: towards a theory of constructive dynamical systems. \textit{Bulletin of Mathematical Biology} \textbf{2007}, \textit{69}, 1199–1231.
-
-\bibitem{SpiceRef}
-Nagel, L.W.; Pederson, D.O. SPICE (Simulation Program with Integrated Circuit Emphasis). University of California, Berkeley, Memorandum No. ERL-M382, Apr. 1973.
-
-\bibitem{FeynmanComp}
-Feynman, R.P. \textit{Feynman Lectures On Computation}; Westview Press: Boulder, CO, USA, 1996.
+\bibitem{kolmogorov1965complexity}
+Kolmogorov, A.N. Three Approaches to the Quantitative Definition of Information. \textit{Problemy Peredachi Informatsii} \textbf{1965}, \textit{1}, 3–11.
 
 \bibitem{chaitin1977algorithmic}
 Chaitin, G.J. Algorithmic Information Theory. \textit{IBM J. Res. Dev.} \textbf{1977}, \textit{21}, 350–359.
 
 \bibitem{solomonoff1964formal}
 Solomonoff, R.J. A Formal Theory of Inductive Inference. Part I and Part II. \textit{Inf. Control} \textbf{1964}, \textit{7}, 1–22, 224–254.
-
-\bibitem{schrodinger1944life}
-Schrödinger, E. \textit{What is Life?}; Cambridge University Press: Cambridge, UK, 1944.
-
-\bibitem{fisher1930genetical}
-Fisher, R.A. \textit{The Genetical Theory of Natural Selection}; Oxford University Press: Oxford, UK, 1930.
-
-\bibitem{rees2000just}
-Rees, M. \textit{Just Six Numbers: The Deep Forces that Shape the Universe}; Basic Books: New York, NY, USA, 2000.
-
-\bibitem{davies2006goldilocks}
-Davies, P. \textit{The Goldilocks Enigma: Why is the Universe Just Right for Life?}; Allen Lane: London, UK, 2006.
-
-\bibitem{noble2012causality}
-Noble, D. A Theory of Biological Relativity: No Privileged Level of Causation. \textit{Interface Focus} \textbf{2012}, \textit{2}, 55–64.
-
-\bibitem{lloyd2006programming}
-Lloyd, S. \textit{Programming the Universe: A Quantum Computer Scientist Takes on the Cosmos}; Alfred A. Knopf: New York, NY, USA, 2006.
-
-\bibitem{wolfram2020fundamental}
-Wolfram, S. \textit{A Project to Find the Fundamental Theory of Physics}; Wolfram Media: Champaign, IL, USA, 2020.
-
-\bibitem{nowak2006evolutionary}
-Nowak, M.A. \textit{Evolutionary Dynamics: Exploring the Equations of Life}; Belknap Press: Cambridge, MA, USA, 2006.
-
-\bibitem{tononi2008phi}
-Tononi, G. Consciousness as Integrated Information: A Provisional Manifesto. \textit{Biological Bulletin} \textbf{2008}, \textit{215}, 216–242.
-
-\bibitem{kolmogorov1965complexity}
-Kolmogorov, A.N. Three Approaches to the Quantitative Definition of Information. \textit{Problemy Peredachi Informatsii} \textbf{1965}, \textit{1}, 3–11.
 
 \bibitem{shannon1948mathematical}
 Shannon, C.E. A Mathematical Theory of Communication. \textit{Bell Syst. Tech. J.} \textbf{1948}, \textit{27}, 379–423.
@@ -646,6 +583,12 @@ Deutsch, D.; Marletto, C. Constructor theory of information. \textit{Proceedings
 
 \bibitem{walker2023nature}
 Walker, S.I.; Cronin, L.; et al. Assembly theory explains and quantifies selection and evolution across physical and biological systems. \textit{Nature} \textbf{2023}, \textit{618}, 619-628.
+
+\bibitem{schrodinger1944life}
+Schrödinger, E. \textit{What is Life?}; Cambridge University Press: Cambridge, UK, 1944.
+
+\bibitem{pross2016life}
+Pross, A. \textit{What is Life? How Chemistry Becomes Biology}; Oxford University Press: Oxford, UK, 2016.
 
 \bibitem{kauffman1986autocatalytic}
 Kauffman, S.A. Autocatalytic sets of proteins. \textit{Journal of Theoretical Biology} \textbf{1986}, \textit{119}, 1–24.
@@ -659,6 +602,45 @@ Fontana, W. Algorithmic chemistry. \textit{Artificial Life II} \textbf{1991}, \t
 \bibitem{barabasi1999emergence}
 Barabási, A.-L.; Albert, R. Emergence of scaling in random networks. \textit{Science} \textbf{1999}, \textit{286}, 509–512.
 
+\bibitem{nowak2006evolutionary}
+Nowak, M.A. \textit{Evolutionary Dynamics: Exploring the Equations of Life}; Belknap Press: Cambridge, MA, USA, 2006.
+
+\bibitem{england2015dissipative}
+England, J.L. Dissipative adaptation in driven self-assembly. \textit{Nature Nanotechnology} \textbf{2015}, \textit{10}, 919–923.
+
+\bibitem{wu2012origin}
+Wu, M.; Higgs, P.G. Origin of self-replicating biopolymers: Autocatalytic feedback can trump power law replication. \textit{Journal of Molecular Evolution} \textbf{2012}, \textit{74}, 91–102.
+
+\bibitem{prigogine1977self}
+Prigogine, I.; Nicolis, G. \textit{Self-Organization in Non-Equilibrium Systems}; Wiley: New York, NY, USA, 1977.
+
+\bibitem{nicolis1977self}
+Nicolis, G.; Prigogine, I. \textit{Self-Organization in Nonequilibrium Systems: From Dissipative Structures to Order through Fluctuations}; Wiley: New York, NY, USA, 1977.
+
+\bibitem{noble2012causality}
+Noble, D. A Theory of Biological Relativity: No Privileged Level of Causation. \textit{Interface Focus} \textbf{2012}, \textit{2}, 55–64.
+
+\bibitem{ellis2012top}
+Ellis, G.F.R. Top-down causation and emergence: Some comments on mechanisms. \textit{Interface Focus} \textbf{2012}, \textit{2}, 126–140.
+
+\bibitem{lloyd2006programming}
+Lloyd, S. \textit{Programming the Universe: A Quantum Computer Scientist Takes on the Cosmos}; Alfred A. Knopf: New York, NY, USA, 2006.
+
+\bibitem{wolfram2020fundamental}
+Wolfram, S. \textit{A Project to Find the Fundamental Theory of Physics}; Wolfram Media: Champaign, IL, USA, 2020.
+
+\bibitem{ball1999self}
+Ball, P. \textit{The Self-Made Tapestry: Pattern Formation in Nature}; Oxford University Press: New York, NY, USA, 1999.
+
+\bibitem{kelso1997dynamic}
+Kelso, J.A.S. \textit{Dynamic Patterns: The Self-Organization of Brain and Behavior}; MIT Press: Cambridge, MA, USA, 1997.
+
+\bibitem{blackmond2010chiral}
+Blackmond, D.G. The origin of biological homochirality. \textit{Cold Spring Harbor Perspectives in Biology} \textbf{2010}, \textit{2}, a002147.
+
+\bibitem{tononi2008phi}
+Tononi, G. Consciousness as Integrated Information: A Provisional Manifesto. \textit{Biological Bulletin} \textbf{2008}, \textit{215}, 216–242.
+
 \bibitem{fogler1999chemical}
 Fogler, H.S. \textit{Elements of Chemical Reaction Engineering} (3rd ed.). Prentice Hall, 1999.
 
@@ -671,11 +653,11 @@ Goldberg, D.E. \textit{Genetic Algorithms in Search, Optimization, and Machine L
 \bibitem{holland1975adaptation}
 Holland, J.H. \textit{Adaptation in Natural and Artificial Systems}; University of Michigan Press: Ann Arbor, MI, USA, 1975.
 
-\bibitem{leff2002maxwell}
-Leff, H.S.; Rex, A.F. \textit{Maxwell's Demon: Entropy, Information, Computing}; Princeton University Press: Princeton, NJ, USA, 2002.
-
 \bibitem{back1996evolutionary}
 Bäck, T.; Fogel, D.B.; Michalewicz, Z. \textit{Evolutionary Computation 1: Basic Algorithms and Operators}; CRC Press: FL, USA, 2000.
+
+\bibitem{leff2002maxwell}
+Leff, H.S.; Rex, A.F. \textit{Maxwell's Demon: Entropy, Information, Computing}; Princeton University Press: Princeton, NJ, USA, 2002.
 
 \bibitem{strogatz2001exploring}
 Strogatz, S.H. Exploring complex networks. \textit{Nature} \textbf{2001}, \textit{410}, 268–276.
@@ -689,8 +671,11 @@ Bertalanffy, L. von. \textit{General System Theory}; George Braziller: New York,
 \bibitem{AdlerCAD}
 Adler, D. Switch Level Simulation Using Dynamic Graph Algorithms. \textit{IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems} \textbf{1991}, \textit{10}.
 
-\bibitem{davies2022selfassembly}
-Davies, J.; Levin, M. Self-Assembly: Synthetic morphology with agential materials. \textit{Nature Reviews Bioengineering} \textbf{2023}, \textit{1}.
+\bibitem{TuranyiTomlin2014}
+Turányi, T.; Tomlin, A.S. \textit{Analysis of Kinetic Reaction Mechanisms}; Springer: Berlin, Germany, 2014.
+
+\bibitem{heylighen2019chemical}
+Heylighen, F.; Beigi, S.; Veloz, T. Chemical Organization Theory as a modeling framework for self-organization, autopoiesis and resilience. International Journal of General Systems, \textbf{2019}, \textit{48}(7), 682-705.
 
 \end{thebibliography}
 
@@ -728,11 +713,11 @@ This hierarchy of stability mechanisms illustrates how stability-driven selectio
 
 \section{Mass Action Kinetics and SDA Systems}
 
-Mass Action Kinetics (MAK) provides deterministic rate equations for chemical reactions:
+Mass Action Kinetics (MAK) \cite{TuranyiTomlin2014} provides deterministic rate equations for chemical reactions:
 \[
 \frac{d[A]}{dt} = -k [A][B]
 \]
-where $[A]$ and $[B]$ represent concentrations and $k$ is a rate constant. Chemical Organization Theory (COT) emphasizes closed, self-maintaining collections of species in fixed reaction networks, while Assembly Theory (AT) uses MAK-like models to link object production to assembly indices.
+where $[A]$ and $[B]$ represent concentrations and $k$ is a rate constant. Chemical Organization Theory (COT) \cite{heylighen2019chemical} emphasizes closed, self-maintaining collections of species in fixed reaction networks, while Assembly Theory (AT) uses MAK-like models to link object production to assembly indices.
 
 While MAK excels at describing known reactions under equilibrium assumptions, it inherently models bidirectional reactions with fixed rates within predefined networks, unlike SDA which emphasizes net forward construction and allows open discovery of novel compounds.
 
@@ -740,7 +725,7 @@ While MAK excels at describing known reactions under equilibrium assumptions, it
 
 MAK models represent species concentration evolution as $\dot{\mathbf{x}} = \mathbf{A}\mathbf{x} + \mathbf{b}$, where \(\mathbf{x}\) represents concentrations, \(\mathbf{A}\) encodes rate constants, and \(\mathbf{b}\) accounts for replenishment. This parallels electronic circuit simulation, where node voltages evolve as $\dot{\mathbf{v}} = \mathbf{A}\mathbf{v} + \mathbf{b}$.
 
-Higher-level circuit abstractions like switch-level simulation track discrete state transitions rather than solving full ODEs, while gate-level models treat circuits as idealized logical operations. Similarly, SDA systems capture dominant generational updates rather than modeling bidirectional flows explicitly. This abstraction, analogous to switch-level circuit simulation, allows SDA to focus on net forward assembly steps that determine pattern persistence and evolution.
+Higher-level circuit abstractions, like switch-level simulation \cite{AdlerCAD}, track discrete state transitions rather than solving full ODEs, while gate-level models treat circuits as idealized logical operations. Similarly, SDA systems capture dominant generational updates rather than modeling bidirectional flows explicitly. This abstraction, analogous to switch-level circuit simulation , allows SDA to focus on net forward assembly steps that determine pattern persistence and evolution.
 
 \end{document}
 
