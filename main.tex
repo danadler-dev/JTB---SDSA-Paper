@@ -430,18 +430,25 @@ At times, these dynamics appear teleological, as if the system were "seeking" mo
 
 \subsection{Dynamic Graph Representation}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{figure_11.png}
+    \caption{Early generation of SDA graph with patterns ABA and ABC dominating.}
+    \label{fig:figure_11}
+\end{figure}
+
 SDA systems can be visualized as directed graphs where nodes represent patterns (base elements and compounds) and edges represent assembly interactions. This network perspective reveals how stability shapes pattern evolution through token flow dynamics.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\linewidth]{figure_11.png}
-    \caption{Graph representation of a SDA system showing stability (S) and the number of instances or tokens (N) of each pattern.}
-    \label{fig:figure_5}
+    \includegraphics[width=0.6\linewidth]{figure_12.png}
+    \caption{Later generation of SDA graph with pattern ABCABA dominating.}
+    \label{fig:figure_12}
 \end{figure}
 
-As shown in Figure~\ref{fig:figure_5}, tokens (representing pattern instances) accumulate at nodes based on stability values, creating preferential flow paths through the graph. Nodes with higher stability (\textit{e.g.}, $ABCABA$) attract more tokens, leading to self-reinforcing dominance. This phenomenon parallels physical systems where high-conductivity channels divert flow from existing pathways, similar to dynamics observed in fluid systems and RC circuits.
+As shown in Figure~\ref{fig:figure_11} Figure~\ref{fig:figure_12}, tokens (representing pattern instances) accumulate at nodes based on stability values, creating preferential flow paths through the graph. Nodes with higher stability (\textit{e.g.}, $ABCABA$) attract more tokens, leading to self-reinforcing dominance. This phenomenon parallels physical systems where high-conductivity channels divert flow from existing pathways, similar to dynamics observed in fluid systems and RC circuits.
 
-The graph structure may undergo significant reorganization if a "disruptor node" with high stability emerges, rerouting token flows and redistributing resources. This dynamic resembles switch-level simulation of transistor networks \cite{AdlerCAD}, where graph pathways are determined by the state of activated components, guiding current flow.
+The graph structure may undergo significant reorganization if a "disruptor node" with high stability emerges, rerouting token flows and redistributing resources. Importantly, this network representation reveals common descent relationships between patterns, where child patterns inherit structural elements from their parent patterns, reflecting a fundamental feature of evolution—the branching lineages of descent with modification. This phylogenetic aspect of the graph allows researchers to trace the evolutionary history of complex patterns back to their simpler ancestors. The overall dynamic resembles switch-level simulation of transistor networks \cite{AdlerCAD}, where graph pathways are determined by the state of activated components, guiding current flow.
 
 \subsection{Application Examples}
 
@@ -449,23 +456,23 @@ The graph structure may undergo significant reorganization if a "disruptor node"
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth,height=0.2\textwidth]{figure_12.png}
+    \includegraphics[width=1\textwidth,height=0.3\textwidth]{figure_13.png}
     \caption{Reaction network for iron oxidation, illustrating the formation of stable and intermediate compounds under stability constraints.}
-    \label{fig:figure_12}
+    \label{fig:figure_13}
 \end{figure}
 
-Figure~\ref{fig:figure_12} illustrates iron oxidation as an SDA system, where oxygen (\(O_2\)) reacts with iron to produce increasingly stable oxides, including iron(II) oxide (\(FeO\)), iron(III) oxide (\(Fe_2O_3\), hematite), and iron(II,III) oxide (\(Fe_3O_4\), magnetite). Stability values (\(S(p)\)) quantify each compound's persistence, with higher values assigned to products with robust bonding and lower susceptibility to dissociation. This reaction network demonstrates how stability shapes chemical pathways, favoring reactions that lead to more persistent products.
+Figure~\ref{fig:figure_13} illustrates iron oxidation as an SDA system, where oxygen (\(O_2\)) reacts with iron to produce increasingly stable oxides, including iron(II) oxide (\(FeO\)), iron(III) oxide (\(Fe_2O_3\), hematite), and iron(II,III) oxide (\(Fe_3O_4\), magnetite). Stability values (\(S(p)\)) quantify each compound's persistence, with higher values assigned to products with robust bonding and lower susceptibility to dissociation. This reaction network demonstrates how stability shapes chemical pathways, favoring reactions that lead to more persistent products.
 
 \subsubsection{Economic Example: Industry Ecosystem}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{figure_13.png}
+    \includegraphics[width=1\textwidth]{figure_14.png}
     \caption{Industry ecosystem represented as an SDA system, showing evolution from base businesses to integrated networks.}
-    \label{fig:figure_9}
+    \label{fig:figure_14}
 \end{figure}
 
-Figure~\ref{fig:figure_9} models an economic ecosystem where manufacturers (A), retailers (B), and logistics providers (C) form progressively more complex partnerships and integrated networks. Stable configurations like manufacturer-retailer partnerships (\( AB \)) and retail-driven networks (\( ABBC \)) act as attractors, accumulating resources over time. Less viable business configurations dissipate quickly, redistributing resources to more stable arrangements.
+Figure~\ref{fig:figure_14} models an economic ecosystem where manufacturers (A), retailers (B), and logistics providers (C) form progressively more complex partnerships and integrated networks. Stable configurations like manufacturer-retailer partnerships (\( AB \)) and retail-driven networks (\( ABBC \)) act as attractors, accumulating resources over time. Less viable business configurations dissipate quickly, redistributing resources to more stable arrangements.
 
 These examples demonstrate how the SDA framework provides a unifying perspective on pattern formation across diverse domains. In each case, stability serves as the key driver of selection, guiding system evolution without requiring explicit replication mechanisms.
 
