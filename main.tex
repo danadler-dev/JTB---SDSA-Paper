@@ -168,13 +168,13 @@ Although SDA systems share some characteristics with natural processes where dif
 
 A Stability-Driven Assembly (SDA) system consists of base elements \( A, B, C, \dots \) capable of forming compounds by concatenation. Compounds are represented as strings formed by combining base elements and existing compounds, allowing for recursive patterns of unbounded length.
 
-The stability of compounds determines their persistence in the population. For example, if compound AAB has a stability of 10, it will persist for 10 generations before disappearing. SDA systems simply eliminate expired patterns instead of explicitly modeling bidirectional dissipation. Compounds with a stability of 0 are created and destroyed in the same generation, effectively simulating impossible interactions.
+The stability of compounds determines their persistence in the population. For example, if compound AAB has a stability of 30, it will persist for 30 generations before disappearing. SDA systems simply eliminate expired patterns instead of explicitly modeling bidirectional dissipation. Compounds with a stability of 0 are created and destroyed in the same generation, effectively simulating impossible interactions.
 
-Base elements regenerate at a constant rate each generation, ensuring continuous resource influx and sustained state-space exploration. This mirrors the continuous-flow stirred tank reactor methodology \cite{fogler1999chemical}, where reactants are replenished to maintain steady state conditions. For \( n \) base elements replenished at a rate of \( m \) copies per generation, \( n \cdot m \) new tokens are injected per generation. The term "token" is used analogously to Petri nets \cite{petri1962communication}, tracking patterns evolving under stability-driven selection.
+Base elements regenerate at a constant rate each generation, ensuring continuous resource influx and sustained state-space exploration. This mirrors the continuous-flow stirred tank reactor (CFSTR) methodology \cite{fogler1999chemical}, where reactants are replenished to maintain steady state conditions. For \( n \) base elements replenished at a rate of \( m \) copies per generation, \( n \cdot m \) new tokens are injected per generation. The term "token" is used analogously to Petri nets \cite{petri1962communication}, tracking patterns evolving under stability-driven selection.
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[height=5cm]{figure_1}
+    \includegraphics[width=0.9\textwidth]{figure_1}
     \caption{SDA analogue of a chemical Continuous Flow Stirred Tank Reactor (CFSTR)}
     \label{fig:figure_1}
 \end{figure}
@@ -237,25 +237,19 @@ Two key distributions characterize SDA systems: the \textbf{population distribut
 
 \subsection{Pattern Evolution Model}
 
-The probability of observing pattern \(p\) in generation \(t+1\) is the result of two processes: persistence of existing copies and creation of new copies through interactions.
-
-For persistence analysis, we account for pattern instances with different creation times:
+The probability of observing pattern \(p\) in generation \(t+1\) is the result of two processes: persistence of existing copies and creation of new copies through interactions. For persistence analysis, we account for pattern instances with different creation times:
 \begin{equation}
 \label{eq:persist-term}
 \mathrm{Persist}_t(p) = P_t(p) \cdot \left(1 - \frac{1}{\overline{R}_t(p)}\right)
 \end{equation}
 
-Here \(\overline{R}_t(p)\) represents the average remaining lifetime of the pattern instances \(p\) at generation \(t\). In a system with constant creation rates, \(\overline{R}_t(p)\) would approach \(\frac{S(p)+1}{2}\).
-
-For creation analysis, we estimate the probability of forming new copies through concatenations:
+Here \(\overline{R}_t(p)\) represents the average remaining lifetime of the pattern instances \(p\) at generation \(t\). In a system with constant creation rates, \(\overline{R}_t(p)\) would approach \(\frac{S(p)+1}{2}\). For creation analysis, we estimate the probability of forming new copies through concatenations:
 \begin{equation}
 \label{eq:create-term}
 \mathrm{Create}_t(p) = \sum_{(q,r) \to p} P_t(q) \cdot P_t(r)
 \end{equation}
 
-Here, \((q,r) \to p\) indicates pattern pairs that form pattern \(p\) when concatenated.
-
-The combined population distribution at the next generation is:
+Here, \((q,r) \to p\) indicates pattern pairs that form pattern \(p\) when concatenated. The combined population distribution at the next generation is:
 \begin{equation}
 \label{eq:full-ba-update}
 P_{t+1}(p) = \frac{
@@ -285,7 +279,7 @@ When $\alpha$ approaches 1, stability-driven selection dominates; when it approa
 \Delta H \approx (1 - \alpha) \cdot \Delta H_{create} + \alpha \cdot \Delta H_{persist}
 \end{equation}
 
-Where $\Delta H_{create}$ represents the change in entropy from creation processes (typically positive) and $\Delta H_{persist}$ represents the change in entropy from stability-driven persistence (typically negative).
+Where $\Delta H_{create}$ represents the change in entropy from creation processes (typically positive) and $\Delta H_{persist}$ represents the change in entropy from stability-driven persistence (typically negative). These two competing dynamics may cause the entropy to oscillate.
 
 \subsection{Simulation Results}
 
@@ -295,16 +289,16 @@ Our simulations comparing SDA systems to unconstrained systems confirm that SDA 
     \centering
     \includegraphics[width=0.7\textwidth]{figure_3.png}
     \caption{The SDA system consistently maintains lower entropy due to selection.}
-    \label{fig:entropy_comparison}
+    \label{fig:figure_3}
 \end{figure}
 
 SDA systems exhibit significantly different pattern distributions, with high-stability patterns dominating the population (Figure~\ref{fig:figure_4}).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{figure_4}
-    \caption{The SDA system (right) shows dominance of a few stable patterns, while the unconstrained system (left) exhibits a more uniform distribution.}
-    \label{fig:pattern_distribution}
+    \includegraphics[width=0.9\textwidth]{figure_4}
+    \caption{The SDA system (right) shows dominance of stable patterns, while the unconstrained system (left) exhibits a more uniform distribution.}
+    \label{fig:figure_4}
 \end{figure}
 
 Interestingly, SDA systems with multiple high-stability patterns often exhibit oscillatory behavior in entropy over time (Figure~\ref{fig:figure_5}).
@@ -313,7 +307,7 @@ Interestingly, SDA systems with multiple high-stability patterns often exhibit o
     \centering
     \includegraphics[width=0.7\textwidth]{figure_5}
     \caption{Oscillatory entropy dynamics in an SDA system.}
-    \label{fig:entropy_oscillations}
+    \label{fig:figure_5}
 \end{figure}
 
 \subsection{Dynamical Systems Interpretation}
@@ -358,41 +352,42 @@ When transitioning from an unconstrained regime to a stability-driven regime, we
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{figure_6.png}
+    \includegraphics[width=0.6\textwidth]{figure_6.png}
     \caption{Entropy evolution when transitioning from Unconstrained $\to$ SDA system. The vertical dashed line marks the intervention point.}
     \label{fig:u2s-entropy}
 \end{figure}
 
-Before intervention, the system exhibited the high entropy characteristic of an unconstrained regime. After imposing the stability function at generation 400, the entropy decreased rapidly before settling into oscillations. Figure~\ref{fig:u2s-patterns} reveals the pattern composition before and after the intervention.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{figure_7.png}
+    \includegraphics[width=0.6\textwidth]{figure_7.png}
     \caption{Pattern composition before (left) and after (right) transitioning from an unconstrained to an SDA system. Bar colors represent stability values.}
     \label{fig:u2s-patterns}
 \end{figure}
+
+Before intervention, the system exhibited the high entropy characteristic of an unconstrained regime. After imposing the stability function at generation 400, the entropy decreased rapidly before settling into oscillations. Figure~\ref{fig:u2s-patterns} reveals the pattern composition before and after the intervention.
 
 In the unconstrained phase, the pattern distribution remained relatively uniform. After introducing stability constraints, the system evolved toward dominance by patterns with higher assigned stability values, supporting the prediction that stability acts as a selective force.
 
 \subsection{SDA to Unconstrained Transition}
 
-To establish bidirectional causality, we examined the transition from a stability-driven regime to an unconstrained regime. Figure~\ref{fig:s2u-entropy} shows the evolution of the entropy during this reverse intervention.
+To establish bidirectional causality, we examined the transition from a stability-driven regime to an unconstrained regime. Figure~\ref{fig:s2u-entropy} shows the evolution of the entropy during this reverse intervention, and Figure~\ref{fig:s2u-patterns} shows how pattern distribution becomes more random.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figure_8.png}
+    \includegraphics[width=0.6\textwidth]{figure_8.png}
     \caption{Entropy evolution when transitioning from an SDA $\to$ an unconstrained system.}
     \label{fig:s2u-entropy}
 \end{figure}
 
-Before intervention, the SDA system oscillated around low entropy values of ~4 bits. Upon removal of stability constraints at generation 400, entropy increased within 100 generations as stable patterns died out, and the system returned to a more uniform distribution with entropy over 6 bits.
-
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{figure_9.png}
-    \caption{Pattern composition before (left) and after (right) transitioning from an SDA to an unconstrained system. Bar colors represent stability values in the SDA phase (left) and pattern length in the unconstrained phase (right).}
+    \includegraphics[width=0.6\textwidth]{figure_9.png}
+    \caption{Pattern composition before (left) and after (right) transitioning from an SDA to an unconstrained system. Bar colors represent stability values.}
     \label{fig:s2u-patterns}
 \end{figure}
+
+Before intervention, the SDA system oscillated around low entropy values of ~4 bits. Upon removal of stability constraints at generation 400, entropy increased within 100 generations as stable patterns died out, and the system returned to a more uniform distribution with entropy over 6 bits.
 
 \subsection{Causal Inference and Evolutionary Dynamics}
 
@@ -441,7 +436,7 @@ SDA systems can be visualized as directed networks, where nodes represent patter
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\linewidth]{figure_12.png}
+    \includegraphics[width=0.5\linewidth]{figure_12.png}
     \caption{Later generation of SDA network with pattern ABCABA dominating.}
     \label{fig:figure_12}
 \end{figure}
@@ -481,13 +476,13 @@ These examples demonstrate how the SDA framework provides a unifying perspective
 
 \subsection{Natural Manifestations of Stability-Driven Selection}
 
-SDA systems abstract principles observable across diverse natural processes where differential persistence creates selection pressure without explicit replication. Crystal formation demonstrates how molecular configurations with lower energy states persist longer, driving systems toward ordered structures \cite{ball1999self}. Similarly, sand dune patterns emerge from the differential stability of formations under specific wind conditions, while river networks evolve as more efficient drainage pathways persist while less stable configurations are reconfigured during flood events \cite{kelso1997dynamic}.
+SDA systems abstract principles observable across diverse natural processes where differential persistence creates selection pressure without explicit replication. Crystal formation demonstrates how molecular configurations with lower energy states persist longer, driving systems towards ordered structures \cite{ball1999self}. Similarly, sand dune patterns emerge from the differential stability of formations under specific wind conditions, while river networks evolve as more efficient drainage pathways persist and less stable configurations are reconfigured during flood events \cite{kelso1997dynamic}.
 
-These natural manifestations share a key property with SDA systems: apparent directionality toward complexity through nothing more than persistence differentials and probabilistic interactions. The framework enables testable predictions about pattern formation in physical and chemical systems. For example, SDA predicts plateau-like transitions in complexity metrics—periods of stasis followed by rapid shifts as new stable patterns emerge, aligning with complexity measurement approaches like integrated information theory \cite{tononi2008phi}.
+These natural manifestations share a key property with SDA systems: apparent directionality toward complexity through nothing more than persistence differentials and probabilistic interactions. The framework enables testable predictions about pattern formation in physical and chemical systems. For example, SDA predicts plateau-like transitions in complexity metrics - periods of stasis followed by rapid shifts as new stable patterns emerge, aligned with complexity measurement approaches such as integrated information theory \cite{tononi2008phi}.
 
 Additionally, SDA systems predict pseudo-homochirality emergence under certain stability constraints. When one stereoisomer achieves greater stability than its mirror image, differential persistence should drive the system toward domination by the more stable configuration \cite{blackmond2010chiral}. Laboratory experiments could test how stability differentials alone might contribute to symmetry breaking in prebiotic chemical systems.
 
-By abstracting away specific physical mechanisms to focus on stability-driven selection, the SDA framework bridges the conceptual gap between non-living physical processes guided by energetic principles and the evolutionary dynamics characteristic of biological systems.
+By abstracting away specific physical mechanisms to focus on stability-driven selection, the SDA framework bridges the conceptual gap between inanimate physical processes guided by energetic principles and the evolutionary dynamics characteristic of biological systems.
 
 \section{Conclusion}
 
