@@ -700,9 +700,26 @@ Heylighen, F.; Beigi, S.; Veloz, T. Chemical Organization Theory as a modeling f
 
 \appendix
 
+\section{Mass Action Kinetics and SDA Systems}
+
+Mass Action Kinetics (MAK) \cite{TuranyiTomlin2014} provides deterministic rate equations for chemical reactions:
+\[
+\frac{d[A]}{dt} = -k [A][B]
+\]
+where $[A]$ and $[B]$ represent concentrations and $k$ is a rate constant. Chemical Organization Theory (COT) \cite{heylighen2019chemical} emphasizes closed self-maintained collections of species in fixed reaction networks, while Assembly Theory (AT) uses MAK-like models to link object production to assembly indices.
+
+Although MAK excels at describing known reactions under equilibrium assumptions, it inherently models bidirectional reactions with fixed rates within predefined networks, unlike SDA which emphasizes net forward construction and allows open discovery of novel compounds.
+
+\subsection{Analogy to Electronic Circuit Simulations}
+
+MAK models represent the evolution of species concentration as $\dot{\mathbf{x}} = \mathbf{A}\mathbf{x} + \mathbf{b}$, where \(\mathbf{x}\) represents concentrations, \(\mathbf{A}\) encodes rate constants, and \(\mathbf{b}\) accounts for replenishment. This parallels electronic circuit simulation, where the node voltages evolve as $\dot{\mathbf{v}} = \mathbf{A}\mathbf{v} + \mathbf{b}$.
+
+Higher-level circuit abstractions, such as switch-level simulation \cite{AdlerCAD}, track discrete state transitions rather than solving full ODEs, while gate-level models treat circuits as idealized logical operations. Similarly, SDA systems capture dominant generational updates rather than modeling bidirectional flows explicitly. This abstraction, analogous to switch-level circuit simulation , allows SDA to focus on net forward assembly steps that determine pattern persistence and evolution.
+
+
 \section{Stability Imbalances in Nature}
 
-The SDA model is motivated by natural stability disparities, from fleeting nuclear states to enduring gravitational structures. These variations in the binding energy and resilience of the system may dictate the formation of low-entropy structures across scales. The persistence of structures is influenced by multiple factors, including spatial arrangements, catalytic reinforcement, and hierarchical assembly.
+The SDA model is motivated by natural stability disparities, from fleeting nuclear states to enduring gravitational structures. These variations in binding energy and system resilience dictate the formation of low-entropy structures across scales. The persistence of structures is influenced by multiple factors, including spatial arrangements, catalytic reinforcement, and hierarchical assembly.
 
 \begin{table}
 \centering
@@ -724,23 +741,12 @@ Gravitational Systems & Millions to billions of years \\
 \end{tabular}
 \end{table}
 
-This hierarchy of stability mechanisms illustrates how stability-driven selection shapes the emergence of low-entropy structures in nature, whether in chemical systems, geological formations, or cosmic architecture.
+This hierarchy of stability mechanisms, spanning twenty orders of magnitude in persistence times, illustrates how stability-driven selection shapes the emergence of low-entropy structures across nature. From quantum-level interactions to cosmic architecture, differential persistence creates an implicit selection pressure without requiring explicit replication machinery. The universal presence of these stability gradients suggests that selection may be more fundamental than previously recognized: a core property of physical reality rather than a specialized biological phenomenon.
 
-\section{Mass Action Kinetics and SDA Systems}
+When viewed through the lens of SDA theory, natural systems can be seen as engaged in a process of information accumulation through stability-driven pattern persistence. The patterns emerging from these systems—whether molecular configurations, geological formations, or galactic structures—represent a form of encoded memory about their environments and interaction histories. This perspective establishes a conceptual bridge between physical self-organization and biological evolution.
 
-Mass Action Kinetics (MAK) \cite{TuranyiTomlin2014} provides deterministic rate equations for chemical reactions:
-\[
-\frac{d[A]}{dt} = -k [A][B]
-\]
-where $[A]$ and $[B]$ represent concentrations and $k$ is a rate constant. Chemical Organization Theory (COT) \cite{heylighen2019chemical} emphasizes closed self-maintained collections of species in fixed reaction networks, while Assembly Theory (AT) uses MAK-like models to link object production to assembly indices.
+By formalizing stability-driven selection in the SDA framework, we provide a mathematical foundation for understanding how complexity and information emerge from simple physical processes.
 
-Although MAK excels at describing known reactions under equilibrium assumptions, it inherently models bidirectional reactions with fixed rates within predefined networks, unlike SDA which emphasizes net forward construction and allows open discovery of novel compounds.
-
-\subsection{Analogy to Electronic Circuit Simulations}
-
-MAK models represent the evolution of species concentration as $\dot{\mathbf{x}} = \mathbf{A}\mathbf{x} + \mathbf{b}$, where \(\mathbf{x}\) represents concentrations, \(\mathbf{A}\) encodes rate constants, and \(\mathbf{b}\) accounts for replenishment. This parallels electronic circuit simulation, where the node voltages evolve as $\dot{\mathbf{v}} = \mathbf{A}\mathbf{v} + \mathbf{b}$.
-
-Higher-level circuit abstractions, such as switch-level simulation \cite{AdlerCAD}, track discrete state transitions rather than solving full ODEs, while gate-level models treat circuits as idealized logical operations. Similarly, SDA systems capture dominant generational updates rather than modeling bidirectional flows explicitly. This abstraction, analogous to switch-level circuit simulation , allows SDA to focus on net forward assembly steps that determine pattern persistence and evolution.
 
 \end{document}
 
