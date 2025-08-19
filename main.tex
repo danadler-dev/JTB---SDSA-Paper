@@ -48,10 +48,17 @@
 \usepackage{booktabs}
 \usepackage{algorithm}
 \usepackage{algorithmic}
-%% The lineno packages adds line numbers. Start line numbering with
-%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
-%% for the whole article with \linenumbers.
-%% \usepackage{lineno}
+\usepackage{soul}   % for \hl highlighting
+\usepackage[normalem]{ulem} % for \sout strikethrough
+\usepackage{xcolor}
+% Define commands for marked version
+\newcommand{\added}[1]{\hl{#1}}
+\newcommand{\deleted}[1]{\textcolor{red}{\sout{#1}}}
+\newcommand{\replaced}[2]{\hl{#1} \textcolor{red}{\sout{#2}}}\usepackage[markup=highlight,highlightcolor=yellow]{changes}
+%% For clean version with changes accepted uncomment in the next 3 lines:
+%%\renewcommand{\added}[1]{#1}
+%%\renewcommand{\deleted}[1]{}
+%%\renewcommand{\replaced}[2]{#1}
 
 \journal{Journal of Theoretical Biology}
 
@@ -109,8 +116,12 @@
 
 %% Abstract
 \begin{abstract}
-The emergence of complexity and information remains a fundamental question in all scientific disciplines. This paper introduces Stability-Driven Assembly (SDA) systems, a theoretical framework that models pattern evolution through probabilistic interactions governed by differential stability. Our computational experiments demonstrate that stability differences alone can generate selection pressure, driving systems toward lower-entropy states characterized by dominant stable patterns, without requiring explicit replication mechanisms. Through controlled intervention experiments, we establish a causal relationship between stability constraints and system evolution, showing how stability functions as a control parameter shaping the evolutionary landscape. The SDA framework reveals the interplay between bottom-up assembly processes and top-down selective pressures, where emergent stable patterns recursively influence future interactions. Dynamic network visualization further illuminates how stability-driven selection operates on all scales. These findings provide a mechanistic explanation for how complexity and information can emerge in abiotic systems, with implications for understanding prebiotic chemical evolution and the transition from inanimate to living matter.
+The emergence of complexity and information remains a fundamental question in all scientific disciplines. This paper introduces Stability-Driven Assembly (SDA) systems, a theoretical framework that models pattern evolution through probabilistic interactions governed by differential stability. Our computational experiments demonstrate that stability differences alone can generate selection pressure, driving systems toward lower-entropy states characterized by dominant stable patterns, without requiring explicit replication mechanisms. Through controlled intervention experiments, we establish a causal relationship \added{within the model} between stability constraints and system evolution, showing how stability functions as a control parameter shaping the evolutionary landscape. The SDA framework reveals the interplay between bottom-up assembly processes and top-down selective pressures, where emergent stable patterns recursively influence future interactions. Dynamic network visualization further illuminates how stability-driven selection operates on all scales. These findings \added{may provide the foundation for} \deleted{provide} a mechanistic explanation \replaced{of}{for} how complexity and information can emerge in abiotic systems\deleted{, with implications for understanding
+prebiotic chemical evolution and the transition from inanimate to
+living matter.}\added{. Looking ahead, we suggest that SDA could provide a useful lens for connecting stochastic dynamical systems with prebiotic chemistry, and for exploring hypotheses about how stability-driven dynamics might precede the emergence of autocatalysis, replication, and Darwinian evolution.}
+
 \end{abstract}
+
 
 
 %%Graphical abstract
