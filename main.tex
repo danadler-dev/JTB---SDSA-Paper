@@ -458,20 +458,22 @@ As shown in Figure~\ref{fig:figure_11} Figure~\ref{fig:figure_12}, tokens (repre
 
 The network structure may undergo significant reorganization if a "disruptor node" with high stability emerges, rerouting token flows, and redistributing resources. Importantly, this network representation reveals common descent relationships between patterns, where child patterns inherit structural elements from their parent patterns, reflecting a fundamental feature of evolution: branching lineages of descent with modification. This phylogenetic aspect of the network allows researchers to trace the evolutionary history of complex patterns back to their simpler ancestors. The overall dynamic resembles switch-level simulation of transistor networks \cite{AdlerCAD}, where network pathways are determined by the state of activated transistors, which guides the current flow.
 
-\subsection{\added{Connection to Master Equation and Fokker-Planck}}
+\subsection{\added{Forward Kolmogorov Perspective on SDA}}
 
-\added{In stochastic systems, the forward Kolmogorov (master) equation expresses the time–evolution of each state's probability as \emph{inflow minus outflow}. It is relevant here because the network token flows that we visualize are precisely those conservative inflows and outflows at each node. In SDA, outflow from a node is not simply a matter of its finite persistence (lifetime), but also results from redistribution toward adjacent nodes of greater stability.}
+\added{The network representation of SDA can be understood through the Forward Kolmogorov (master equation) formalism, which governs how probability mass flows among discrete states over time:}
 
-\added{This distinguishes the SDA mechanism from pure thermodynamic relaxation, since the effective drift depends on the relative stability landscape, not only on diffusive decay. The SDA probability dynamics can be cast in a standard master equation form}:
 \begin{equation}
-\frac{dp_i}{dt} = \sum_j \Big[ W_{ji}(t)\,p_j(t) - W_{ij}(t)\,p_i(t) \Big],
+\label{eq:kolmogorov-general}
+\frac{dP_t(p)}{dt}
+= \sum_{q} W_{q \to p}(t) P_t(q)
+- \sum_{r} W_{p \to r}(t) P_t(p),
 \end{equation}
-\added{where} \(W_{ij}\) \added{are transition rates between patterns} \(j\) and \(i\). \added{These rates are modulated by the stability function} \(S(\cdot)\), \added{which itself depends on the current population distribution, leading to a time-dependent, distribution-dependent drift.} 
 
-\added{Unlike conventional master equation models with fixed transition rates, such as the mass–action kinetics (MAK) models discussed in the Appendix, in SDA the rates $W_{ij}(t)$ are time-dependent because they are modulated by the evolving probability distribution itself. This makes the effective drift endogenous and dynamically self-consistent, reflecting the feedback between stability, persistence, and creation.}
+\added{where $W_{q \to p}(t)$ and $W_{p \to r}(t)$ are inflow and outflow rates for pattern node $p$. In conventional master equation models (e.g., MAK models in the Appendix), these rates are fixed externally. In SDA, in contrast, flows are biased by fixed stability values assigned to patterns. Relative stability differences between patterns skew the probability distribution, so that over time, more stable patterns gain weight while less stable ones lose it. As the population distribution evolves, the effective flow rates change with it, producing a recursive distribution-dependent drift field unique to the SDA model.}
 
-\added{This formulation is equivalent to the forward Kolmogorov equation, the discrete precursor of the Fokker--Planck equation, which describes how probability distributions evolve over time. In conventional applications, the drift term in the Fokker-Planck equation reflects an} \emph{external} \added{force field that biases the system. In contrast, in SDA the drift emerges} \emph{endogenously} \added{from the distribution itself: the transition rates are modulated by the stability function} \(S(\cdot)\)\added{, which depends on the current population distribution. 
-This recursive coupling produces inherently non-equilibrium dynamics, distinct from stationary solutions of conventional thermodynamic systems. A fuller nonlinear Fokker-Planck treatment, including entropy production and phase behavior, will be explored in a future paper.}
+\added{This recursive dependence makes it natural to describe SDA systems as \emph{evolving}. In the Kolmogorov framework, probability continuously flows between patterns, biased by their relative stability. Because the drift is shaped by the current distribution, the system explores, selects, and retains structures over time rather than settling into equilibrium. Entropy change in SDA thus reflects an evolutionary process in which stability acts as a selection principle shaping system trajectories. A fuller connection to non-linear Fokker–Planck dynamics will be developed in future work.}
+
+
 
 
 \subsection{Application Examples}
@@ -488,6 +490,9 @@ This recursive coupling produces inherently non-equilibrium dynamics, distinct f
 \end{figure}
 
 Figure~\ref{fig:figure_13} illustrates iron oxidation as an SDA system, where oxygen (\(O_2\)) reacts with iron to produce increasingly stable oxides, including iron(II) oxide (\(FeO\)), iron(III) oxide (\(Fe_2O_3\), hematite, and iron (II,III) oxide (\(Fe_3O_4\), magnetite). The stability values (\(S(p)\)) quantify the persistence of each compound, with higher values assigned to products with robust bonding and lower susceptibility to dissociation. This reaction network demonstrates how stability shapes chemical pathways, favoring reactions that lead to more persistent products.
+
+\added{This example is provided as an \emph{illustrative heuristic} rather than a chemically parameterized kinetics model. Reversibility and detailed kinetic rates are not modeled here. The purpose is to show how SDA captures the directional bias imposed by relative stability: less stable intermediates lose probability weight to more persistent oxides, exemplifying how stability-driven flows favor durable structures.}
+
 
 \subsubsection{Economic Example: Industry Ecosystem}
 
