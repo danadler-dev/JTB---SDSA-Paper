@@ -469,18 +469,16 @@ The network structure may undergo significant reorganization if a "disruptor nod
 - \sum_{r} W_{p \to r}(t) P_t(p),
 \end{equation}
 
-\added{where $W_{q \to p}(t)$ and $W_{p \to r}(t)$ are inflow and outflow rates for pattern node $p$. In conventional master equation models (e.g., MAK models in the Appendix), these rates are fixed externally. In SDA, in contrast, flows are biased by fixed stability values assigned to patterns. Relative stability differences between patterns skew the probability distribution, so that over time, more stable patterns gain weight while less stable ones lose it. As the population distribution evolves, the effective flow rates change with it, producing a recursive distribution-dependent drift field unique to the SDA model.}
+\added{where $W_{q \to p}(t)$ and $W_{p \to r}(t)$ are inflow and outflow rates for pattern node $p$. In SDA, inflow arises from the creation of $p$ through interactions of other patterns, while outflow can occur in two ways: either (i) redistribution when a pattern is combined into a more stable product, or (ii) decay when a pattern instance reaches the end of its finite lifetime. In conventional master equation models (e.g., MAK models in the Appendix), such flow rates are externally fixed. In SDA, by contrast, flows are biased by fixed stability values assigned to patterns. Relative stability differences skew the probability distribution so that more stable patterns gain weight while less stable ones lose it. As the population distribution evolves, the effective flow rates change with it, producing a recursive distribution-dependent drift field unique to the SDA model.}
+
 
 \added{This recursive dependence makes it natural to describe SDA systems as \emph{evolving}. In the Kolmogorov framework, probability continuously flows between patterns, biased by their relative stability. Because the drift is shaped by the current distribution, the system explores, selects, and retains structures over time rather than settling into equilibrium. Entropy change in SDA thus reflects an evolutionary process in which stability acts as a selection principle shaping system trajectories. A fuller connection to non-linear Fokker–Planck dynamics will be developed in future work.}
 
 
 
-
 \subsection{Application Examples}
 
-
-
-\subsubsection{Chemical Example: Iron Oxidation}
+\subsubsection{\added{Illustrative} Chemical Example: Iron Oxidation}
 
 \begin{figure}[h]
     \centering
@@ -516,6 +514,85 @@ These natural manifestations share a key property with SDA systems: apparent dir
 Additionally, SDA systems predict pseudo-homochirality emergence under certain stability constraints. When one stereoisomer achieves greater stability than its mirror image, differential persistence should drive the system toward domination by the more stable configuration \cite{blackmond2010chiral}. Laboratory experiments could test how stability differentials alone might contribute to symmetry breaking in prebiotic chemical systems.
 
 By abstracting away specific physical mechanisms to focus on stability-driven selection, the SDA framework bridges the conceptual gap between inanimate physical processes guided by energetic principles and the evolutionary dynamics characteristic of biological systems.
+
+\section{Benefits and Limitations of SDA}
+\label{sec:benefits-limitations}
+
+\added{
+Stability-Driven Assembly (SDA) provides a simple but powerful framework for
+understanding how structure and information can emerge in prebiotic and
+non-replicative systems. To situate SDA in the broader landscape, we briefly
+summarize its advantages, limitations, and outlook.
+}
+
+\subsection*{Benefits}
+
+\added{
+SDA offers several conceptual advantages over existing modeling frameworks.
+First, it provides a \textbf{general mechanism of selection} that applies even
+in the absence of replication or catalysis. By defining transitions solely in
+terms of probabilistic interactions and relative stability, SDA captures how
+abiotic systems can already display selection-like dynamics, extending the
+scope of evolutionary theory beyond biology.
+
+A second benefit is SDA’s \textbf{minimal set of assumptions}. Whereas
+Kauffman’s autocatalytic sets require catalysis to be present from the outset,
+and Eigen’s hypercycles presuppose replication, SDA demonstrates how
+persistence alone can generate directional bias. Autocatalysis and replication
+may subsequently emerge, but SDA identifies the more primitive regime in which
+differential stability alone is sufficient to structure system dynamics.
+
+SDA also differs from \textbf{chemical computation frameworks}, such as
+Fontana’s lambda-calculus models or Cronin’s chemputation systems. Those
+approaches define a semantics for compounds or reactions and then analyze their
+possible compositions. SDA, by contrast, does not assign semantic content to
+chemical species; instead, it provides a generative mechanism by which
+probabilistic assembly and decay, filtered by stability, yield evolving
+patterns. In this sense, SDA complements semantic models by offering a physical
+basis for how the distribution of patterns itself changes over time.
+
+In relation to \textbf{network growth models}, SDA diverges sharply from
+preferential attachment dynamics of the Barabási–Albert type. In those models,
+nodes with higher degree accumulate more links simply by virtue of existing
+connectivity (“the rich get richer”). SDA flows are not driven by connectivity
+alone but by persistence: stability biases determine which nodes retain
+probability weight. This produces attractor structures that are qualitatively
+different from popularity-based network growth and directly tied to material
+durability.
+
+Finally, SDA emphasizes \textbf{top-down causation and interpretability}.
+Because emergent stable patterns feed back to constrain future flows, the
+system recursively reshapes its own trajectory. This dynamic can be represented
+directly in network form, making causal relationships and selection pressures
+transparent in a way that purely algebraic treatments often obscure.
+}
+
+
+\subsection*{Limitations}
+
+\added{
+SDA is an early-stage conceptual framework and has important limitations.
+(i) Stability values are heuristic and not yet mapped to empirical free-energy
+scales. (ii) Energy costs, reversibility, and explicit thermodynamic
+constraints are not modeled. (iii) Replication and Darwinian dynamics are not
+yet incorporated. (iv) Current simulations are limited in scale, leaving the
+behavior of large, high-dimensional systems open. These caveats emphasize that
+SDA should be viewed as a foundational abstraction rather than a fully
+specified physical model.
+}
+
+\subsection*{Outlook}
+
+\added{
+Despite these limitations, SDA highlights how stability can serve as a
+selection principle in evolving systems. Future work will focus on connecting
+stability metrics to thermodynamic quantities, extending the framework to
+autocatalysis and replication, and developing a non-linear Fokker--Planck
+formalism for entropy and phase behavior. In this way, SDA may provide a
+bridge between stochastic physics and the evolutionary dynamics of living
+systems.
+}
+
 
 \section{Conclusion}
 
