@@ -528,43 +528,65 @@ summarize its advantages, limitations, and outlook.
 \subsection*{Benefits}
 
 \added{
-SDA offers several conceptual advantages over existing modeling frameworks.
-First, it provides a \textbf{general mechanism of selection} that applies even
-in the absence of replication or catalysis. By defining transitions solely in
-terms of probabilistic interactions and relative stability, SDA captures how
-abiotic systems can already display selection-like dynamics, extending the
-scope of evolutionary theory beyond biology.
+SDA provides a \textbf{general mechanism of selection} that operates even
+without replication or catalysis. By defining transitions through probabilistic
+interactions and relative stability, it shows how abiotic systems can already
+exhibit selection dynamics beyond biology.
+}
 
-A second benefit is SDA’s \textbf{minimal set of assumptions}. Whereas
-Kauffman’s autocatalytic sets require catalysis to be present from the outset,
-and Eigen’s hypercycles presuppose replication, SDA demonstrates how
-persistence alone can generate directional bias. Autocatalysis and replication
-may subsequently emerge, but SDA identifies the more primitive regime in which
-differential stability alone is sufficient to structure system dynamics.
+\added{SDA also requires fewer assumptions than many existing models. 
+Kauffman’s autocatalytic sets} \cite{kauffman1986autocatalytic,hordijk2012autocatalytic,nghe2015prebiotic} 
+\added{depend on catalysis from the outset, and Eigen’s hypercycles} 
+\cite{wu2012origin,nowak2006evolutionary} 
+\added{presuppose replication. By contrast, SDA shows how persistence alone can bias 
+system dynamics, identifying a more primitive regime in which differential 
+stability is sufficient to generate structure before autocatalysis or replication emerge.}
 
-SDA also differs from \textbf{chemical computation frameworks}, such as
-Fontana’s lambda-calculus models or Cronin’s chemputation systems. Those
-approaches define a semantics for compounds or reactions and then analyze their
-possible compositions. SDA, by contrast, does not assign semantic content to
-chemical species; instead, it provides a generative mechanism by which
-probabilistic assembly and decay, filtered by stability, yield evolving
-patterns. In this sense, SDA complements semantic models by offering a physical
-basis for how the distribution of patterns itself changes over time.
 
-In relation to \textbf{network growth models}, SDA diverges sharply from
-preferential attachment dynamics of the Barabási–Albert type. In those models,
-nodes with higher degree accumulate more links simply by virtue of existing
-connectivity (“the rich get richer”). SDA flows are not driven by connectivity
-alone but by persistence: stability biases determine which nodes retain
-probability weight. This produces attractor structures that are qualitatively
-different from popularity-based network growth and directly tied to material
-durability.
+\added{SDA also differs from \textbf{chemical computation frameworks}, such as
+Fontana’s algorithmic chemistry} \cite{fontana1991algorithmic} \added{or Cronin’s
+chemputation approaches} \cite{walker2023nature}. \added{These models define a semantics for compounds or reactions and then analyze their possible compositions. SDA, by contrast, does not assign semantic content to chemical species; instead, it
+provides a generative mechanism by which probabilistic assembly and decay,
+filtered by stability, yield evolving patterns. In this sense, SDA complements
+semantic models by offering a physical basis for how the distribution of
+patterns itself changes over time.}
 
-Finally, SDA emphasizes \textbf{top-down causation and interpretability}.
+\added{In relation to \textbf{network growth models}, SDA differs from
+preferential attachment dynamics of the Barabási–Albert type}
+\cite{barabasi1999emergence,strogatz2001exploring}. \added{There, nodes gain
+links by degree (“the rich get richer”), whereas in SDA persistence governs
+flows: stability biases determine which nodes retain probability weight,
+producing attractor structures qualitatively distinct from popularity-based
+growth and tied instead to material durability.}
+
+\added{SDA contrasts with \textbf{mass–action kinetics (MAK)} models}
+\cite{fogler1999chemical,TuranyiTomlin2014,heylighen2019chemical}, 
+\added{which describe chemical systems through deterministic rate equations with
+fixed parameters. MAK and related frameworks such as Chemical Organization Theory}
+\cite{heylighen2019chemical} 
+\added{excel at analyzing predefined networks under equilibrium or near-equilibrium
+assumptions, where bidirectional reactions evolve with constant rates specified
+externally. By contrast, SDA flow rates depend on the time-evolving probability
+distribution, as described in the Kolmogorov formulation, making them inherently
+dynamic and distribution-dependent. This allows SDA to capture recursive drift
+fields absent from conventional kinetics. In this respect, SDA functions more
+like a generative, switch-level abstraction}
+\cite{AdlerCAD} 
+\added{than a detailed kinetic solver, focusing on the net forward assembly steps
+that bias evolutionary trajectories. MAK models represent the evolution of
+species concentration as $\dot{\mathbf{x}} = \mathbf{A}\mathbf{x} + \mathbf{b}$,
+where $\mathbf{x}$ represents concentrations, $\mathbf{A}$ encodes rate constants,
+and $\mathbf{b}$ accounts for replenishment. This parallels electronic circuit
+simulation, where the node voltages evolve as $\dot{\mathbf{v}} = \mathbf{A}\mathbf{v} + \mathbf{b}$.
+SDA, like switch-level circuit models, abstracts away bidirectional flows in favor
+of tracking dominant state transitions that determine persistence and evolution.}
+
+
+
+\added{Finally, SDA emphasizes \textbf{top-down causation and interpretability}.
 Because emergent stable patterns feed back to constrain future flows, the
-system recursively reshapes its own trajectory. This dynamic can be represented
-directly in network form, making causal relationships and selection pressures
-transparent in a way that purely algebraic treatments often obscure.
+system recursively reshapes its own trajectory. This dynamic connects to the
+literature on top-down causation} \cite{ellis2012top,noble2012causality}, \added{and can be represented directly in network form, making causal relationships and selection pressures transparent in a way that purely algebraic treatments often obscure.
 }
 
 
@@ -584,14 +606,19 @@ specified physical model.
 \subsection*{Outlook}
 
 \added{
-Despite these limitations, SDA highlights how stability can serve as a
-selection principle in evolving systems. Future work will focus on connecting
-stability metrics to thermodynamic quantities, extending the framework to
-autocatalysis and replication, and developing a non-linear Fokker--Planck
-formalism for entropy and phase behavior. In this way, SDA may provide a
-bridge between stochastic physics and the evolutionary dynamics of living
-systems.
+While the SDA model is deliberately
+simplistic (concatenation is not equivalent to chemical binding), it functions as
+a zero-order framework that isolates persistence from other physical factors.
+Future work will focus on connecting stability metrics to thermodynamic
+quantities, extending the framework to autocatalysis and replication, and
+developing a non-linear Fokker-Planck formalism for entropy and phase
+behavior. In this way, SDA may also provide a conceptual bridge to the idea of
+codes: whereas the life sciences are comfortable treating DNA as a code, SDA
+suggests that prebiotic structures may also be viewed in informational
+terms. Thus, the framework may help connect stochastic physics with
+the evolutionary dynamics of living systems.
 }
+
 
 
 \section{Conclusion}
@@ -810,26 +837,9 @@ Heylighen, F.; Beigi, S.; Veloz, T. Chemical Organization Theory as a modeling f
 
 \appendix
 
-\section{Mass Action Kinetics and SDA Systems}
-
-Mass Action Kinetics (MAK) \cite{TuranyiTomlin2014} provides deterministic rate equations for chemical reactions:
-\[
-\frac{d[A]}{dt} = -k [A][B]
-\]
-where $[A]$ and $[B]$ represent concentrations and $k$ is a rate constant. Chemical Organization Theory (COT) \cite{heylighen2019chemical} emphasizes closed self-maintained collections of species in fixed reaction networks, while Assembly Theory (AT) uses MAK-like models to link object production to assembly indices.
-
-Although MAK excels at describing known reactions under equilibrium assumptions, it inherently models bidirectional reactions with fixed rates within predefined networks, unlike SDA which emphasizes net forward construction and allows open discovery of novel compounds.
-
-\subsection{Analogy to Electronic Circuit Simulations}
-
-MAK models represent the evolution of species concentration as $\dot{\mathbf{x}} = \mathbf{A}\mathbf{x} + \mathbf{b}$, where \(\mathbf{x}\) represents concentrations, \(\mathbf{A}\) encodes rate constants, and \(\mathbf{b}\) accounts for replenishment. This parallels electronic circuit simulation, where the node voltages evolve as $\dot{\mathbf{v}} = \mathbf{A}\mathbf{v} + \mathbf{b}$.
-
-Higher-level circuit abstractions, such as switch-level simulation \cite{AdlerCAD}, track discrete state transitions rather than solving full ODEs, while gate-level models treat circuits as idealized logical operations. Similarly, SDA systems capture dominant generational updates rather than modeling bidirectional flows explicitly. This abstraction, analogous to switch-level circuit simulation , allows SDA to focus on net forward assembly steps that determine pattern persistence and evolution.
-
-
 \section{Stability Imbalances in Nature}
 
-The SDA model is motivated by natural stability disparities, from fleeting nuclear states to enduring gravitational structures. These variations in binding energy and system resilience dictate the formation of low-entropy structures across scales. The persistence of structures is influenced by multiple factors, including spatial arrangements, catalytic reinforcement, and hierarchical assembly.
+The SDA model is motivated by natural stability disparities, from fleeting nuclear states to enduring gravitational structures. These variations in the binding energy and resilience of the system dictate the formation of low-entropy structures on multiple scales. The persistence of structures is influenced by multiple factors, including spatial arrangements, catalytic reinforcement, and hierarchical assembly.
 
 \begin{table}
 \centering
