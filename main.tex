@@ -157,11 +157,11 @@ Stability-driven selection; Abiotic evolution; Pattern formation; Emergent compl
 
 \section{Introduction}
 
-"\textit{Selection for longevity becomes inseparable from selection for propagation. What persists has, by definition, a greater opportunity to propagate its structure.}" This observation by Stuart Kauffman \cite{kauffman1995home} identifies a fundamental principle that may bridge the gap between inanimate physical processes and biological evolution. Although the mechanisms of biological evolution through natural selection are well established \cite{fisher1930genetical}, the emergence of selection itself prior to true replication remains enigmatic. \added{This is the main concept of this paper, formalized as Stability-Driven Assembly (SDA) systems.}
+"\textit{Selection for longevity becomes inseparable from selection for propagation. What persists has, by definition, a greater opportunity to propagate its structure.}" This observation by Stuart Kauffman \cite{kauffman1995home} identifies a fundamental principle that may bridge the gap between inanimate physical processes and biological evolution. Although the mechanisms of biological evolution through natural selection are well established \cite{fisher1930genetical}, the emergence of selection itself prior to true replication remains enigmatic. 
 
-In inanimate physical systems, patterns persist according to their stability under prevailing conditions. A carbon lattice in diamond form persists longer than graphite under high pressure; certain molecular configurations outlast others in various chemical environments \cite{davies2006goldilocks}. This differential persistence creates an implicit selection mechanism: stable configurations naturally become more prevalent over time simply by outlasting less stable alternatives. This fundamental principle of stability-driven selection may have preceded and enabled the emergence of biological selection \cite{hordijk2012autocatalytic, nghe2015prebiotic}.
+In inanimate physical systems, patterns persist according to their stability under prevailing conditions. A carbon lattice in diamond form persists longer than graphite under high pressure; certain molecular configurations outlast others in various chemical environments \cite{davies2006goldilocks}. This differential persistence creates an implicit selection mechanism: stable configurations naturally become more prevalent over time simply by outlasting less stable alternatives. This fundamental principle of stability-driven selection may have preceded and enabled the emergence of biological selection \cite{hordijk2012autocatalytic, nghe2015prebiotic}. \added{This is the main concept of this paper, formalized as Stability-Driven Assembly (SDA) systems.}
 
-The study of such selection mechanisms spans multiple scientific disciplines. Algorithmic complexity \cite{kolmogorov1965complexity, chaitin1977algorithmic, solomonoff1964formal} and Shannon's information theory \cite{shannon1948mathematical} provide tools to quantify patterns and information, but do not explain how information emerges from physical systems. Constructor theory \cite{deutsch2013constructor} reframes physical laws in terms of possible transformations, while Assembly Theory (AT) \cite{walker2023nature} quantifies complexity through the minimal steps needed to construct an object, but provides a retrospective rather than dynamic model of selection in real time.
+The study of such selection mechanisms spans multiple scientific disciplines. Algorithmic complexity \cite{kolmogorov1965complexity, chaitin1977algorithmic, solomonoff1964formal} and Shannon's information theory \cite{shannon1948mathematical} provide tools to quantify patterns and information, but do not explain how information emerges from physical systems. Constructor theory \cite{deutsch2013constructor} reframes physical laws in terms of possible transformations, while Assembly Theory (AT) \cite{walker2023nature} quantifies complexity through the minimal steps needed to construct an object, but provides a retrospective rather than generative model of selection in real time.
 
 The transition from inanimate systems to living systems represents one of the most profound questions of science \cite{schrodinger1944life, pross2016life}. Several theoretical frameworks have attempted to explain the emergence of complex, information-rich systems from simpler components. Particularly relevant to stability-driven selection are autocatalytic sets, developed by Kauffman \cite{kauffman1986autocatalytic} and further explored by Hordijk and Filisetti \cite{hordijk2011required}, which examine how networks of molecules can collectively catalyze each other's production. \added{Eigen’s hypercycles }\cite{eigen} \added{represent a related framework, in which self-replicating entities are linked into cyclic, mutually reinforcing networks. Although hypercycles extend the autocatalytic principle to higher-level biochemical or informational cycles, they still presuppose the existence of a replication machinery. In contrast, we will show how SDA systems can exhibit selection pressures which arise before replication, based only on persistence differences.}
 
@@ -298,7 +298,7 @@ The expected entropy change between generations can be expressed as:
 \Delta H = H(P_{t+1}) - H(P_t)
 \end{equation}
 
-The relative influence of persistence versus creation is quantified by parameter $\alpha$:
+\added{where $H(P_t) = - \sum_{p \in P} P_t(p) \log_2 P_t(p),$ denotes the Shannon entropy of the pattern distribution at generation $t$ measured in bits.} The relative influence of persistence versus creation is quantified by parameter $\alpha$:
 \begin{equation}
 \alpha = \frac{\sum_p \mathrm{Persist}_t(p)}{\sum_p \mathrm{Persist}_t(p) + \sum_p \mathrm{Create}_t(p)}
 \end{equation}
@@ -772,29 +772,28 @@ Fisher, R.A. \textit{The Genetical Theory of Natural Selection}; Oxford Universi
 Davies, P. \textit{The Goldilocks Enigma: Why is the Universe Just Right for Life?}; Allen Lane: London, UK, 2006.
 
 \bibitem{hordijk2012autocatalytic}
-Hordijk, W.; Steel, M.; Kauffman, S. The structure of autocatalytic sets: Evolvability, enablement, and emergence. \textit{Acta Biotheoretica} \textbf{2012}, \textit{60}, 379–392.
-
+Hordijk, W.; Steel, M.; Kauffman, S. \textit{The Structure of Autocatalytic Sets: Evolvability, Enablement, and Emergence.} Acta Biotheoretica \textbf{2012}, \textit{60}, 379–392.
 
 \bibitem{nghe2015prebiotic}
-Nghe, P.; Hordijk, W.; Kauffman, S.A.; Walker, S.I.; Schmidt, F.J.; Kemble, H.; Yeates, J.A.; Lehman, N. Prebiotic network evolution: Six key parameters. \textit{Molecular BioSystems} \textbf{2015}, \textit{11}, 3206–3217.
+Nghe, P.; Hordijk, W.; Kauffman, S.A.; Walker, S.I.; Schmidt, F.J.; Kemble, H.; Yeates, J.A.; Lehman, N. \textit{Prebiotic network evolution: Six key parameters.} Molecular BioSystems \textbf{2015}, \textit{11}, 3206–3217.
 
 \bibitem{kolmogorov1965complexity}
-Kolmogorov, A.N. Three Approaches to the Quantitative Definition of Information. \textit{Problemy Peredachi Informatsii} \textbf{1965}, \textit{1}, 3–11.
+Kolmogorov, A.N. \textit{Three Approaches to the Quantitative Definition of Information.} Problemy Peredachi Informatsii \textbf{1965}, \textit{1}, 3–11.
 
 \bibitem{chaitin1977algorithmic}
-Chaitin, G.J. Algorithmic Information Theory. \textit{IBM J. Res. Dev.} \textbf{1977}, \textit{21}, 350–359.
+Chaitin, G.J. \textit{Algorithmic Information Theory.} IBM J. Res. Dev. \textbf{1977}, \textit{21}, 350–359.
 
 \bibitem{solomonoff1964formal}
-Solomonoff, R.J. A Formal Theory of Inductive Inference. Part I and Part II. \textit{Inf. Control} \textbf{1964}, \textit{7}, 1–22, 224–254.
+Solomonoff, R.J. \textit{A Formal Theory of Inductive Inference. Part I and Part II.} Inf. Control \textbf{1964}, \textit{7}, 1–22, 224–254.
 
 \bibitem{shannon1948mathematical}
-Shannon, C.E. A Mathematical Theory of Communication. \textit{Bell Syst. Tech. J.} \textbf{1948}, \textit{27}, 379–423.
+Shannon, C.E. \textit{A Mathematical Theory of Communication.} Bell Syst. Tech. J. \textbf{1948}, \textit{27}, 379–423.
 
 \bibitem{deutsch2013constructor}
-Deutsch, D.; Marletto, C. Constructor theory of information. \textit{Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences} \textbf{2015}, \textit{471}, 20140540.
+Deutsch, D.; Marletto, C. \textit{Constructor theory of information.} Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences \textbf{2015}, \textit{471}, 20140540.
 
 \bibitem{walker2023nature}
-Walker, S.I.; Cronin, L.; et al. Assembly theory explains and quantifies selection and evolution across physical and biological systems. \textit{Nature} \textbf{2023}, \textit{618}, 619-628.
+Walker, S.I.; Cronin, L.; et al. \textit{Assembly theory explains and quantifies selection and evolution across physical and biological systems.} Nature \textbf{2023}, \textit{618}, 619-628.
 
 \bibitem{schrodinger1944life}
 Schrödinger, E. \textit{What is Life?}; Cambridge University Press: Cambridge, UK, 1944.
@@ -803,31 +802,31 @@ Schrödinger, E. \textit{What is Life?}; Cambridge University Press: Cambridge, 
 Pross, A. \textit{What is Life? How Chemistry Becomes Biology}; Oxford University Press: Oxford, UK, 2016.
 
 \bibitem{kauffman1986autocatalytic}
-Kauffman, S.A. Autocatalytic sets of proteins. \textit{Journal of Theoretical Biology} \textbf{1986}, \textit{119}, 1–24.
+Kauffman, S.A. \textit{Autocatalytic sets of proteins.} Journal of Theoretical Biology \textbf{1986}, \textit{119}, 1–24.
 
 \bibitem{hordijk2011required}
-Hordijk, W.; Kauffman, S.A.; Steel, M. Required levels of catalysis for emergence of autocatalytic sets in models of chemical reaction systems. \textit{International Journal of Molecular Sciences} \textbf{2011}, \textit{12}, 3085–3101.
+Hordijk, W.; Kauffman, S.A.; Steel, M. \textit{Required levels of catalysis for emergence of autocatalytic sets in models of chemical reaction systems.} International Journal of Molecular Sciences \textbf{2011}, \textit{12}, 3085–3101.
 
 \bibitem{eigen}
 Eigen M. \textit{The Hypercycle: A Principle of Natural Self-Organization.} Springer, 1979.
 
 \bibitem{fontana1991algorithmic}
-Fontana, W. Algorithmic chemistry. \textit{Artificial Life II} \textbf{1991}, \textit{11}, 159–209.
+Fontana, W. \textit{Algorithmic chemistry.} Artificial Life II \textbf{1991}, \textit{11}, 159–209.
 
 \bibitem{cronin2024chemputation}
 Cronin, L.; Pagel, S.; Sharma, A. \textit{The Chemputer and Chemputation: A Universal Chemical Compound Synthesis Machine}. Preprint available on arXiv (August 2024), arXiv:2408.09171.
 
 \bibitem{barabasi1999emergence}
-Barabási, A.-L.; Albert, R. Emergence of scaling in random networks. \textit{Science} \textbf{1999}, \textit{286}, 509–512.
+Barabási, A.-L.; Albert, R. \textit{Emergence of Scaling in Random Networks.} Science \textbf{1999}, \textit{286}, 509–512.
 
 \bibitem{nowak2006evolutionary}
 Nowak, M.A. \textit{Evolutionary Dynamics: Exploring the Equations of Life}; Belknap Press: Cambridge, MA, USA, 2006.
 
 \bibitem{england2015dissipative}
-England, J.L. Dissipative adaptation in driven self-assembly. \textit{Nature Nanotechnology} \textbf{2015}, \textit{10}, 919–923.
+England, J.L. \textit{Dissipative Adaptation in Driven Self-Assembly.} Nature Nanotechnology \textbf{2015}, \textit{10}, 919–923.
 
 \bibitem{wu2012origin}
-Wu, M.; Higgs, P.G. Origin of self-replicating biopolymers: Autocatalytic feedback can trump power law replication. \textit{Journal of Molecular Evolution} \textbf{2012}, \textit{74}, 91–102.
+Wu, M.; Higgs, P.G. \textit{Origin of self-replicating biopolymers: Autocatalytic feedback can trump power law replication.} Journal of Molecular Evolution \textbf{2012}, \textit{74}, 91–102.
 
 \bibitem{prigogine1977self}
 Prigogine, I.; Nicolis, G. \textit{Self-Organization in Non-Equilibrium Systems}; Wiley: New York, NY, USA, 1977.
@@ -836,10 +835,10 @@ Prigogine, I.; Nicolis, G. \textit{Self-Organization in Non-Equilibrium Systems}
 Nicolis, G.; Prigogine, I. \textit{Self-Organization in Nonequilibrium Systems: From Dissipative Structures to Order through Fluctuations}; Wiley: New York, NY, USA, 1977.
 
 \bibitem{noble2012causality}
-Noble, D. A Theory of Biological Relativity: No Privileged Level of Causation. \textit{Interface Focus} \textbf{2012}, \textit{2}, 55–64.
+Noble, D. \textit{A Theory of Biological Relativity: No Privileged Level of Causation.} Interface Focus \textbf{2012}, \textit{2}, 55–64.
 
 \bibitem{ellis2012top}
-Ellis, G.F.R. Top-down causation and emergence: Some comments on mechanisms. \textit{Interface Focus} \textbf{2012}, \textit{2}, 126–140.
+Ellis, G.F.R. \textit{Top-down causation and emergence: Some comments on mechanisms.} Interface Focus \textbf{2012}, \textit{2}, 126–140.
 
 \bibitem{lloyd2006programming}
 Lloyd, S. \textit{Programming the Universe: A Quantum Computer Scientist Takes on the Cosmos}; Alfred A. Knopf: New York, NY, USA, 2006.
@@ -854,16 +853,16 @@ Ball, P. \textit{The Self-Made Tapestry: Pattern Formation in Nature}; Oxford Un
 Kelso, J.A.S. \textit{Dynamic Patterns: The Self-Organization of Brain and Behavior}; MIT Press: Cambridge, MA, USA, 1997.
 
 \bibitem{blackmond2010chiral}
-Blackmond, D.G. The origin of biological homochirality. \textit{Cold Spring Harbor Perspectives in Biology} \textbf{2010}, \textit{2}, a002147.
+Blackmond, D.G. \textit{The origin of biological homochirality.} Cold Spring Harbor Perspectives in Biology \textbf{2010}, \textit{2}, a002147.
 
 \bibitem{tononi2008phi}
-Tononi, G. Consciousness as Integrated Information: A Provisional Manifesto. \textit{Biological Bulletin} \textbf{2008}, \textit{215}, 216–242.
+Tononi, G. \textit{Consciousness as Integrated Information: A Provisional Manifesto.} Biological Bulletin \textbf{2008}, \textit{215}, 216–242.
 
 \bibitem{fogler1999chemical}
 Fogler, H.S. \textit{Elements of Chemical Reaction Engineering} (3rd ed.). Prentice Hall, 1999.
 
 \bibitem{petri1962communication}
-Petri, C.A. Communication with Automata. Technical Report RADC-TR-65-377, Rome Air Development Center, New York, 1966.
+Petri, C.A. \textit{Communication with Automata.} Technical Report RADC-TR-65-377, Rome Air Development Center, New York, 1966.
 
 \bibitem{goldberg1989genetic}
 Goldberg, D.E. \textit{Genetic Algorithms in Search, Optimization, and Machine Learning}; Addison-Wesley: Boston, MA, USA, 1989.
@@ -878,7 +877,7 @@ Bäck, T.; Fogel, D.B.; Michalewicz, Z. \textit{Evolutionary Computation 1: Basi
 Leff, H.S.; Rex, A.F. \textit{Maxwell's Demon: Entropy, Information, Computing}; Princeton University Press: Princeton, NJ, USA, 2002.
 
 \bibitem{strogatz2001exploring}
-Strogatz, S.H. Exploring complex networks. \textit{Nature} \textbf{2001}, \textit{410}, 268–276.
+Strogatz, S.H. \textit{Exploring complex networks.} Nature \textbf{2001}, \textit{410}, 268–276.
 
 \bibitem{landau1980statistical}
 Landau, L.D.; Lifshitz, E.M. \textit{Statistical Physics}; Pergamon Press, 1980.
@@ -887,7 +886,7 @@ Landau, L.D.; Lifshitz, E.M. \textit{Statistical Physics}; Pergamon Press, 1980.
 Bertalanffy, L. von. \textit{General System Theory}; George Braziller: New York, NY, USA, 1968.
 
 \bibitem{AdlerCAD}
-Adler, D. Switch Level Simulation Using Dynamic Graph Algorithms. \textit{IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems} \textbf{1991}, \textit{10}.
+Adler, D. \textit{Switch Level Simulation Using Dynamic Graph Algorithms.} IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems \textbf{1991}, \textit{10}.
 
 \bibitem{gardiner}
 Gardiner, Crispin \textit{Stochastic Methods (Fourth Edition)}; Springer: Berlin, Germany, 2009.
@@ -896,7 +895,7 @@ Gardiner, Crispin \textit{Stochastic Methods (Fourth Edition)}; Springer: Berlin
 Turányi, T.; Tomlin, A.S. \textit{Analysis of Kinetic Reaction Mechanisms}; Springer: Berlin, Germany, 2014.
 
 \bibitem{heylighen2019chemical}
-Heylighen, F.; Beigi, S.; Veloz, T. Chemical Organization Theory as a modeling framework for self-organization, autopoiesis and resilience. International Journal of General Systems, \textbf{2019}, \textit{48}(7), 682-705.
+Heylighen, F.; Beigi, S.; Veloz, T. \textit{Chemical Organization Theory as a modeling framework for self-organization, autopoiesis and resilience.} International Journal of General Systems, \textbf{2019}, \textit{48}(7), 682-705.
 
 \end{thebibliography}
 
